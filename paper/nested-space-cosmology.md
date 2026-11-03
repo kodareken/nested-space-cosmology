@@ -12,17 +12,22 @@ connect nested regions, their exchange of energy across event horizons, and the
 quantities measured by an interior observer. The foundation rests on five openly
 declared geometric axioms (**A0--A4**): (**A0**) geometry follows the path of
 least resistance by minimizing the 1D Cauchy--Schwarz generator stretch cost plus
-enclosing compression work, $E = Q_{\mathrm{stretch}} + PV$, without fluid
-incompressibility or borrowed surface tension; (**A1**) a 1D spatial seed plus an
+enclosing compression work, $E = Q_{\mathrm{stretch}} + PV = \sum_{i=1}^3 m_i/\lambda_i + PV_0\lambda_1\lambda_2\lambda_3$,
+which arises directly as the 1D curve-bundle and cavity-mode reduction of the
+covariant 3+1D field Hamiltonian $\int_V (T^{00}_{\mathrm{phase}} + V(s_*))\,d^3x$
+with background vacuum pressure $P = V(s_*)$; (**A1**) a 1D spatial seed plus an
 inherited compression offset (time) generates a closed 2D circle and 3D sphere;
 (**A2**) seen edge-on, the closed circle $z(\tau)=R_0e^{i\omega\tau}$ is the
 harmonic pendulum $R(\tau)=R_0\cos(\omega\tau)$, which crosses `0` smoothly into
 the negative direction $R<0$ (`-`), flipping the 3D orientation Jacobian
 $\det F=(R/R_0)^3$ from `+` to `-` and turning inward implosion ($\dot{R}<0$)
 into outward child expansion ($\dot{r}_-=-\dot{R}>0$) without the artificial
-velocity cusp $\Delta\dot{r}=+2R_0\omega$ created when standard physics restricts
-radius to an unsigned size $r=|R|\geq 0$; (**A3**) each nested room carries a
-moving wavelength band $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
+velocity cusp $\Delta\dot{r}=+2R_0\omega$ created when radius is restricted to
+an unsigned size $r=|R|\geq 0$, while in 3+1D curved geometry the standing-wave
+hard core $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$ and hybrid radial inertia
+$M(r)=1/(1+r^2/3)$ bound all curvature invariants across the transition; (**A3**)
+each nested room carries a moving wavelength band
+$[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
 bounded by its Planck cutoff ($\lambda_{\min}$) and Absolute-Zero horizon
 ($\lambda_{\max}$); and (**A4**) every room sits between an outer birth `0` valve
 and inner black-hole `0` valves on a closed vortex--diffusion ring (`O <-> o`).
@@ -30,58 +35,68 @@ and inner black-hole `0` valves on a closed vortex--diffusion ring (`O <-> o`).
 Minimizing the unified 5-variable single-cost functional across `+`, `0`, and `-`
 yields a unique closed-form global minimum (Section 9) and six parameter-free
 geometric and dynamical theorems:
-(1) eliminating both internal variables $(\theta^*,\chi)$ from the five-variable
-budget shares $(D,M,V)$ with $B=M-D/3$ yields the exact zero-parameter algebraic
-curve $9DVB=4(V+B/2)^3$, inverse recovery $\theta^*=1/(1+2V/B)$ and
-$e^{2\chi}=\frac{2V+B}{B}\sqrt{\frac{2V+B}{3DV}}$, and the deep-nest invariant
-$\lim_{\chi\to\infty}B/V^2=16/27$;
-(2) without fluid assumptions, the infalling `+` parcel shrinks in volume while
-spaghettifying into a 1D filament above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.346574$
-($\theta^*=1/2$), while three independent geometric mechanisms ($d\lambda/\lambda$
-scale-invariant measure, active-tube concentration $w_{\mathrm{tube}}=1$, and
-zero-mode topological phase $\Delta\theta/\pi=1/2$) bypass the $e^{-3K}$
-volumetric dilution wall with $O(1)$ survival, and 3D standing-wave closure
-selects the `(1,1,1)` triad ground state ($E_{1,1,1}=3\pi^2/R^2$, $2:1$ split
-against the $S^2$ angular floor) with a finite wave-compression hard core
-$R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$;
-(3) for any incompressible irrotational potential flow around a spherical throat
-of radius $R(\tau)$ with volume flux $Q=4\pi R^2\dot{R}$, the exterior kinetic
-energy $T_{\mathrm{ext}}=2\pi\rho_0 R^3\dot{R}^2$ and surrounding-flow Virial
-work $W_{\mathrm{flow}}=\int_{r>R}\mathbf{x}\cdot(-\nabla p)\,d^3x$ obey the exact
-parameter-free $3:1$ partition $T_{\mathrm{ext}}:W_{\mathrm{flow}}=3:1$;
-(4) coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$
-produces the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$
-with zero-radius continuum opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$,
-a hybrid last-echo horizon cutoff $\tau_{\mathrm{echo}}=0.87596883$
-($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63\%$),
-and self-consistent parent curvature backreaction ($8.98\%$ asymptotic shift);
-(5) integrating the outward causal stress balance over the entire exterior
-$r\in[R,\infty)$ of the exact harmonic two-center family gives the parameter-free
-algebraic neck-splitting onset cubic $p^3-3p-3=0$ ($p_{\mathrm{crit}}=1+2^{1/3}+2^{-1/3}\approx 2.52988065$,
-$(c/R)_{\mathrm{onset}}=0.56786589<(c/R)_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$),
-finite-time pinch crossing $\Delta\tau_{\mathrm{pinch}}=0.506704$, positive
-central observer pulse $\max\phi_C=+0.163689$, and exact analytical pole-sum tail
-$\phi_C(T)=-0.14192836/T'+0.01750496/(T')^2+O((T')^{-3})$; and
-(6) harmonicity ($\Delta\Phi=0$) forces the directional enclosed-volume derivative
-trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ to vanish at
-every stage, driving a 3-axis orthogonal post-pinch cascade
-$\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ ($1\to 2\to 4\to 8$ lobes, exact
-harmonic ratios $-1/2$ and $-2$) coupled by the exact multipole identity
-$\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$ and a
-strictly positive-definite, $B$-independent $2\times 2$ quasistatic kinetic matrix
-($M_{12}=-0.0054817211\neq 0$, $\det M_{\mathrm{full}}=0.1400308435>0$, initial
-transverse conjugate momentum $p_2(0)=+0.05157014>0$). Secondary single-valve
-epoch and ladder ansätze ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}\approx 4.9787\%$
-giving $71.1441\% / 23.8772\% / 4.9787\%$, and $K=7$ giving $\eta_7=5.955329\times 10^{-10}$)
-are strictly quarantined in Section 9.7 from the parameter-free theorems above.
 
-Sections 2--8 preserve the conditional two-scalar Einstein control apparatus and
-the pre-registered single-horizon flow test NSC-P006 ($88.4735067504\%$ scalar
-patch-energy crossing, normalized area growth $1.085638919782\,\epsilon^2$,
-short-leg transfer $2.219782587242\,\epsilon^2$, and one-mode neck-trapping
-threshold $\epsilon_{\mathrm{crit}}=0.8339066$), while Appendix A summarizes the
-nine preserved technical engines and links to the archived `v0.26.0` foundation
-record.
+- **(1) Exact algebraic budget surface and Friedmann equations of state:**
+  Eliminating both internal variables $(\theta^*,\chi)$ from the five-variable
+  budget shares $(D,M,V)$ with $B=M-D/3$ yields the exact zero-parameter algebraic
+  curve $9DVB=4(V+B/2)^3$, exact inverse recovery $\theta^*=D/(D+V+B/2)$ and
+  $e^{-\chi}=3\sqrt{\theta^*}B/(2V+B)$ (equivalently $e^{2\chi}=V(D+V+B/2)/[B(V+B/2)]$),
+  and the deep-nest invariant $\lim_{\chi\to\infty}B/V^2=16/27$. Differentiating
+  with respect to the expanding child volume $V_-=V_0(\theta^*)^{3/2}=V_0 a_-^3$
+  yields the exact Friedmann equations of state $w_{\mathrm{DE}}=-(\partial E_{\mathrm{DE}}^*/\partial V_-)/\rho_{\mathrm{DE}}=-1$
+  ($\rho_{\mathrm{DE}}=3P=\mathrm{const}$) and $w_{\mathrm{DM}}=-(\partial E_{\mathrm{DM}}^*/\partial V_{\mathrm{bulk}})/\rho_{\mathrm{DM}}=0$
+  ($\rho_{\mathrm{DM}}\propto a_-^{-3}$, $c_{s,\mathrm{DM}}^2=0$), matching the
+  covariant massive-scalar late tail $\langle p_\chi\rangle/\langle\rho_\chi\rangle\to 0$.
+- **(2) Universal exponential-wall bypasses, `(1,1,1)` 3D triad ground state, and $O(1)$ dilution survival:**
+  Above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2$, the infalling `+` parcel
+  shrinks in volume while spaghettifying into a 1D filament ($\theta^*=1/2$), while
+  three scale-free geometric mechanisms ($d\lambda/\lambda$ logarithmic measure,
+  active vortex-tube circulation $w_{\mathrm{tube}}=1$, and zero-mode topological
+  phase $\Delta\theta/\pi=1/2$) bypass the $e^{-3K}$ volumetric dilution wall at
+  $O(1)$. In 3D standing-wave closure, the orthogonal `(1,1,1)` triad is the unique
+  minimum-cost 3D ground state ($E_{1,1,1}=3\pi^2/R^2$, $2:1$ split against the
+  $S^2$ angular floor) with wave-compression hard core $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$
+  and short-range nuclear hard-core repulsion $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)$
+  against merging into `(2,2,2)`.
+- **(3) Surrounding-flow $3:1$ Virial partition, helical buckling, and damped `+`/`0`/`-` oscillator:**
+  For any incompressible irrotational potential flow around a spherical throat of
+  radius $R(\tau)$ with volume flux $Q=4\pi R^2\dot{R}$, the exterior kinetic energy
+  $T_{\mathrm{ext}}=2\pi\rho_0 R^3\dot{R}^2$ and surrounding-flow Virial work
+  $W_{\mathrm{flow}}=\int_{r>R}\mathbf{x}\cdot(-\nabla p)\,d^3x$ obey the exact
+  parameter-free $3:1$ partition $T_{\mathrm{ext}}:W_{\mathrm{flow}}=3:1$, while
+  axial compression buckles laterally into a helix and drives a damped `+`/`0`/`-`
+  horizon oscillation with exact asymmetries $\eta_{\mathrm{area}}=\tanh(\frac{\pi\gamma}{2\omega})$
+  and $\eta_{\mathrm{work}}=\tanh(\frac{\pi\gamma}{\omega})=2\eta_{\mathrm{area}}/(1+\eta_{\mathrm{area}}^2)$.
+- **(4) Coupled finite-parent / receiver continuation, continuum zero-radius opening, and last-echo cutoff:**
+  Coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$ with
+  hybrid radial inertia $M(r)=1/(1+r^2/3)$ admits a continuum wave-driven opening
+  from zero radius $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$, the
+  closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$,
+  and a sharp last-echo horizon cutoff ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$,
+  visible interior snapshot $25.63\%$, parent curvature backreaction shift $8.98\%$).
+- **(5) Spherical fragmentation, whole-exterior causal neck onset, and outgoing multipole waveform:**
+  Integrating the outward causal stress balance over the entire exterior
+  $r\in[R,\infty)$ of the exact harmonic two-center family gives the parameter-free
+  characteristic cubic $p^3-3p-3=0$ and static neck-instability root
+  $p_{\mathrm{crit}}=1+2^{1/3}+2^{-1/3}$, finite-time neck pinch, positive central
+  observer pulse, and an analytical pole-sum late-time tail $\phi_C(T)\propto -1/T'+O((T')^{-2})$.
+- **(6) Three-axis orthogonal post-pinch cascade and $2\times 2$ kinetic handoff:**
+  Harmonicity ($\Delta\Phi=0$) forces the directional enclosed-volume derivative
+  trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ to vanish at
+  every stage, driving a 3-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$
+  ($1\to 2\to 4\to 8$ lobes with exact harmonic ratios $-1/2$ and $-2$), coupled by
+  the exact multipole identity $\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
+  and a strictly positive-definite, $B$-independent $2\times 2$ quasistatic kinetic
+  matrix ($\det M_{\mathrm{full}}>0$, initial transverse conjugate momentum $p_2(0)>0$).
+
+Sections 2--8 present the covariant 3+1D two-scalar Einstein control apparatus and
+the pre-registered single-horizon flow test NSC-P006 ($88.47\%$ scalar patch-energy
+crossing, normalized area growth $1.0856\,\epsilon^2$, short-leg transfer
+$2.2198\,\epsilon^2$, and one-mode neck-trapping threshold $\epsilon_{\mathrm{crit}}=0.8339$).
+Secondary single-valve epoch and ladder ansätze ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}$
+and $K=7$) are strictly quarantined in Section 9.7 from the parameter-free
+theorems, while Appendix A summarizes the nine technical engines and provides the
+complete reproducibility index.
 
 ## 1. One spatial seed, offset history and a generated geometry
 
@@ -109,10 +124,8 @@ $$
 with phases taken modulo one and zero initial phases ($\theta_0=\phi_0=0$).
 Hence $\theta_n=n\alpha$ and $\phi_n=\frac{1}{2}n(n-1)\alpha$ modulo one. One
 accumulator feeds the second; no independent second phase is supplied. For
-irrational $\alpha$, Weyl's criterion proves that the joint phase history is
-dense on the two-phase torus $\mathbb{T}^2$. This uses the classical polynomial
-equidistribution framework, attributed in the
-[generator proof](../docs/nsc-atlas-offset-generator.md).
+irrational $\alpha$, Weyl's polynomial equidistribution criterion proves that
+the joint phase history is dense on the two-phase torus $\mathbb{T}^2$.
 
 Setting $\Theta_n=2\pi\theta_n$ and $\Phi_n=2\pi\phi_n$, the generated unit
 directions and their inner-product kernel are
@@ -138,8 +151,7 @@ $$
 
 generates the closed spatial parent $S^3$. Memory, the distance law and metric
 completion are explicit assumptions; finite drawings have zero three-dimensional
-volume before completion. The [record](../results/summaries/nsc-atlas-offset-generator-v1.json)
-retains the proof and finite coverage controls (commit `099d8364`).
+volume before completion.
 
 ![One seed and its offset history generate circular and spherical completions](figures/nsc-atlas-offset-generator.png)
 
@@ -152,43 +164,80 @@ $$
 stating that the normalized operator law is preserved under the parent-to-child
 pullback $\mathcal{T}^*$.
 
-### 1.1 Openly declared geometric axioms (A0--A4)
+### 1.1 Openly declared geometric axioms (A0--A4) and covariant field reduction
 
 To build a rigorous deductive chain without unstated fluid-physics analogies
 (such as assuming parcel incompressibility $\lambda_1\lambda_2\lambda_3=1$ or
 borrowed surface tension), the non-local foundation states five explicit
 geometric axioms:
 
-1. **A0 (Path of Least Resistance):** By Cauchy--Schwarz on any generated 1D
-   phase curve of physical length $L_i=\lambda_i L_{i,0}$ carrying winding change
-   $\Delta\psi_i$, the intrinsic stretch cost is $Q_{\mathrm{stretch}}(A)=\frac{1}{2}\mathrm{Tr}[(A^TA)^{-1/2}C^TC]=\sum_i m_i/\lambda_i$.
-   Under enclosing compression work $PV$, geometry minimizes the single cost
-   functional $E=Q_{\mathrm{stretch}}+PV$.
-2. **A1 (1D Seed + Inherited Offset = Time):** Every child seed forms inside an
-   already evolving parent at relative log-length compression
-   $\chi_{p\to c}=\frac{1}{3}\ln[(J_p/J_{p,0})/(J_c/J_{c,0})]$, which satisfies
-   exact telescoping $\chi_{g\to c}=\chi_{g\to p}+\chi_{p\to c}$ across generations.
-   Repeated offset accumulation generates the 2D circle and 3D sphere.
-3. **A2 (Signed-Zero Crossing $+ \to 0 \to -$):** The radial coordinate $R(\tau)$
-   is a signed geometric coordinate rather than an unsigned size. Under winning
-   inward compression $F_{\mathrm{net}}=F_{\mathrm{in}}-F_{\mathrm{out}}>0$,
-   $R(\tau)$ crosses smoothly through `0` into $R<0$ (`-`), flipping the 3D
-   orientation Jacobian $\det[(R/R_0)I_3]=(R/R_0)^3$ from `+` to `-` and
-   converting inward implosion ($\dot{R}<0$) into outward child expansion
-   ($\dot{r}_-=-\dot{R}>0$, $r_-=-R>0$).
-4. **A3 (Moving Spectral Band $[\lambda_{\min},\lambda_{\max}]$):** Each room at
-   relative compression $\chi$ supports a finite wavelength band
-   $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
-   bounded by its shortest wavelength before `0` crosses into `-` (local Planck
-   cutoff $\lambda_{\min}$) and its longest wavelength as wide as the room itself
-   (local Absolute-Zero horizon $\lambda_{\max}=2R$).
-5. **A4 (Two-Valve Nested Circulation):** Each `0` horizon is a one-way valve
-   from `+` to `-` conserving total turn budget $n_++n_-=N_0$ ($n_+=(1-\theta)N_0$,
-   $n_-=\theta N_0$). Every local room sits between an outer birth `0` valve
-   (inflow from parent) and inner black-hole `0` valves (outflow to children)
-   on a closed vortex--diffusion ring (`O <-> o`).
+- **A0 (Path of Least Resistance):** By Cauchy--Schwarz on any generated 1D
+  phase curve of physical length $L_i=\lambda_i L_{i,0}$ carrying winding change
+  $\Delta\psi_i$, the intrinsic stretch cost is
+  $Q_{\mathrm{stretch}}(A)=\frac{1}{2}\mathrm{Tr}[(A^TA)^{-1/2}C^TC]=\sum_{i=1}^3 m_i/\lambda_i$.
+  Under enclosing compression work $PV$, geometry minimizes the single cost
+  functional $E=Q_{\mathrm{stretch}}+PV$.
+- **A1 (1D Seed + Inherited Offset = Time):** Every child seed forms inside an
+  already evolving parent at relative log-length compression
+  $\chi_{p\to c}=\frac{1}{3}\ln[(J_p/J_{p,0})/(J_c/J_{c,0})]$, which satisfies
+  exact telescoping $\chi_{g\to c}=\chi_{g\to p}+\chi_{p\to c}$ across generations.
+  Repeated offset accumulation generates the 2D circle and 3D sphere.
+- **A2 (Signed-Zero Crossing $+ \to 0 \to -$):** The radial coordinate $R(\tau)$
+  is a signed geometric coordinate rather than an unsigned size. Under winning
+  inward compression $F_{\mathrm{net}}=F_{\mathrm{in}}-F_{\mathrm{out}}>0$,
+  $R(\tau)$ crosses smoothly through `0` into $R<0$ (`-`), flipping the 3D
+  orientation Jacobian $\det[(R/R_0)I_3]=(R/R_0)^3$ from `+` to `-` and
+  converting inward implosion ($\dot{R}<0$) into outward child expansion
+  ($\dot{r}_-=-\dot{R}>0$, $r_-=-R>0$).
+- **A3 (Moving Spectral Band $[\lambda_{\min},\lambda_{\max}]$):** Each room at
+  relative compression $\chi$ supports a finite wavelength band
+  $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
+  bounded by its shortest wavelength before `0` crosses into `-` (local Planck
+  cutoff $\lambda_{\min}$) and its longest wavelength as wide as the room itself
+  (local Absolute-Zero horizon $\lambda_{\max}=2R$).
+- **A4 (Two-Valve Nested Circulation):** Each `0` horizon is a one-way valve
+  from `+` to `-` conserving total turn budget $n_++n_-=N_0$ ($n_+=(1-\theta)N_0$,
+  $n_-=\theta N_0$). Every local room sits between an outer birth `0` valve
+  (inflow from parent) and inner black-hole `0` valves (outflow to children)
+  on a closed vortex--diffusion ring (`O <-> o`).
 
-### 1.2 Circle-pendulum duality: why `-` exists, `(-) x (-) = (+)`, and why $R=0$ is smooth
+**Proposition 1.1 (Reduction of the Covariant 3+1D Field Hamiltonian to A0):**
+Consider the covariant 3+1D scalar-gravity Lagrangian of Section 2,
+$\mathcal{L}=\frac{R}{2\kappa}-\frac{1}{2}(\nabla S)^2-\frac{1}{2}(\nabla\chi)^2-V(s)-\frac{1}{2}\mu^2(s)\chi^2$,
+evaluated on an orthorhombic principal domain $V=V_0\lambda_1\lambda_2\lambda_3$
+of physical lengths $L_i=\lambda_i L_{i,0}$ ($i=1,2,3$) immersed in the parent
+background vacuum energy density $P\equiv V(s_*)$. Along each generated 1D
+phase-curve bundle $\gamma_i$ of physical length $L_i=\lambda_i L_{i,0}$ and
+conserved cross-sectional flux tube $A_{\perp,i}$ carrying topological phase
+winding $\Delta\psi_i=\int_0^{L_i}\partial_s\psi_i\,ds=2\pi n_i$ (or,
+equivalently, for a relativistic cavity standing wave with principal wavevector
+$k_i=\pi n_i/(\lambda_i L_{i,0})$), the Cauchy--Schwarz inequality on the spatial
+gradient energy yields
+
+$$
+\int_{\mathrm{tube}\,i}\frac{1}{2}(\partial_s\psi_i)^2\,d^3x
+=\frac{A_{\perp,i}}{2}\int_0^{L_i}(\partial_s\psi_i)^2\,ds
+\geq\frac{A_{\perp,i}(\Delta\psi_i)^2}{2L_{i,0}\lambda_i}
+\equiv\frac{m_i}{\lambda_i},\qquad
+m_i=\frac{2\pi^2 A_{\perp,i}n_i^2}{L_{i,0}},
+$$
+
+with equality attained on the harmonic uniform-gradient phase $\partial_s\psi_i=\Delta\psi_i/L_i$.
+Adding the bulk background vacuum energy $\int_V V(s_*)\,d^3x=PV_0\lambda_1\lambda_2\lambda_3$
+gives the exact reduced Hamiltonian functional of **A0**:
+
+$$
+E(\lambda_1,\lambda_2,\lambda_3)
+=\int_V\left(T^{00}_{\mathrm{phase}}+V(s_*)\right)d^3x
+=\sum_{i=1}^3\frac{m_i}{\lambda_i}+PV_0\lambda_1\lambda_2\lambda_3.
+$$
+
+Whereas smearing a fixed gradient homogeneously across empty 3D volume dilutes
+as $\lambda^{d-2}=\lambda^1=e^{-\chi}$, integrating along the generated 1D phase
+curves preserves the $1/\lambda_i$ Cauchy--Schwarz stretch resistance in every
+dimension $d$.
+
+### 1.2 Circle-pendulum duality: why `-` exists, `(-) x (-) = (+)`, and curvature regularization at $R=0$
 
 In Layer 1 of the offset generator, the pen draws a closed circle
 $z(\tau)=R_0e^{i\omega\tau}$. Seen edge-on along any diameter, that uniform
@@ -203,28 +252,37 @@ which swings $+R_0\to 0\to -R_0\to 0\to +R_0$ with invariant total energy
 $\frac{1}{2}\dot{R}^2+\frac{1}{2}\omega^2 R^2=\frac{1}{2}R_0^2\omega^2$. Three
 exact geometric consequences follow immediately:
 
-1. **Why `-` must exist for space to close:** Negative is direction, not less
-   than nothing. If negative coordinates are forbidden ($R\geq 0$ only), the
-   circle is clipped to $\omega\tau\in[-\pi/2,\pi/2]$: exactly $50\%$ of its
-   arc length ($\pi R_0$ out of $2\pi R_0$) is lost and no loop or bounded
-   space can close.
-2. **Why `(-) x (-) = (+)` is two-generation geometry:** Multiplying by
-   $-1=e^{i\pi}$ is a geometric half-turn ($\pi$ rotation). In three spatial
-   dimensions, crossing `0` applies the spatial inversion $\mathcal{P}=-I_3$
-   with $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$).
-   Crossing `0` a second time into the grandchild applies two half-turns,
-   $\mathcal{P}^2=(-I_3)(-I_3)=+I_3$ with $\det(\mathcal{P}^2)=(-1)(-1)=+1$
-   ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$).
-3. **Why standard physics hits an artificial singularity at $r=0$:** Standard
-   physics uses negative coordinates everywhere except for the radius of space
-   itself, which it restricts to an unsigned size $r(\tau)=|R(\tau)|\geq 0$.
-   At the horizon crossing $\tau_0=\pi/(2\omega)$ ($R=0$), folding the negative
-   half of the swing onto the positive half forces a discontinuous velocity jump
-   $\Delta\dot{r}=\dot{r}(\tau_0^+)-\dot{r}(\tau_0^-)=+2R_0\omega$ and a
-   Dirac-delta acceleration cusp $\ddot{r}=2R_0\omega\,\delta(\tau-\tau_0)-\omega^2 r$.
-   Keeping the signed coordinate $R(\tau)$ removes the cusp completely
-   ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$): **A2 (crossing `0` into `-`) is the
-   edge-on shadow of A1's closed circle.**
+- **(1) Why `-` must exist for space to close:** Negative is direction, not less
+  than nothing. If negative coordinates are forbidden ($R\geq 0$ only), the
+  circle is clipped to $\omega\tau\in[-\pi/2,\pi/2]$: exactly $50\%$ of its
+  arc length ($\pi R_0$ out of $2\pi R_0$) is lost and no loop or bounded
+  space can close.
+- **(2) Why `(-) x (-) = (+)` is two-generation geometry:** Multiplying by
+  $-1=e^{i\pi}$ is a geometric half-turn ($\pi$ rotation). In three spatial
+  dimensions, crossing `0` applies the spatial inversion $\mathcal{P}=-I_3$
+  with $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$).
+  Crossing `0` a second time into the grandchild applies two half-turns,
+  $\mathcal{P}^2=(-I_3)(-I_3)=+I_3$ with $\det(\mathcal{P}^2)=(-1)(-1)=+1$
+  ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$).
+- **(3) Kinematic cusp removal and 3+1D curvature regularization at $R=0$:**
+  Standard physics uses negative coordinates everywhere except for the radius of
+  space itself, which it restricts to an unsigned size $r(\tau)=|R(\tau)|\geq 0$.
+  At the horizon crossing $\tau_0=\pi/(2\omega)$ ($R=0$), folding the negative
+  half of the swing onto the positive half forces a discontinuous velocity jump
+  $\Delta\dot{r}=\dot{r}(\tau_0^+)-\dot{r}(\tau_0^-)=+2R_0\omega$ and a
+  Dirac-delta acceleration cusp $\ddot{r}=2R_0\omega\,\delta(\tau-\tau_0)-\omega^2 r$.
+  Keeping the signed coordinate $R(\tau)$ removes this kinematic cusp completely
+  ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$). In 3+1D curved geometry, where
+  coordinate-invariant curvature scalars such as the Kretschmann invariant
+  $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}\propto R_{\mathrm{areal}}^{-6}$ would
+  diverge if a massive shell collapsed to zero physical area, this signed
+  coordinate passage acts in tandem with two physical regularizations derived in
+  Section 9: the `(1,1,1)` standing-wave compression hard core
+  $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$ (Theorem 2, Section 9.2), which bounds
+  spatial curvature invariants by $R_{\mathrm{areal}}\geq R_{\mathrm{core}}>0$,
+  and the hybrid radial inertia metric $M(r)=1/(1+r^2/3)$ (Theorem 4, Section 9.4),
+  which makes the proper birth distance $\int_0^\varepsilon\sqrt{M(r)}\,dr<\infty$
+  finite and admits a smooth continuum opening from zero radius.
 
 ## 2. The smooth zero interface and its inherited source
 
@@ -253,7 +311,7 @@ Its prepared real scalar contains two spatial harmonics with Laplacian
 eigenvalues $3$ and $8$, equal reference energy, and zero initial velocity.
 The reference frequency $\omega_0=20$, state amplitude $\epsilon$, and
 background curvature $H$ remain declared inputs; the minimum of $V(s)$
-supplies the background parent vacuum.
+supplies the background parent vacuum $P=V(s_*)$.
 
 In conformal null coordinates $u=\eta-\chi$ and $v=\eta+\chi$, the smooth
 horizon lies at $v=\pi/2$, where the inherited radial fields satisfy
@@ -265,7 +323,7 @@ $$
 
 There is no horizon denominator and no membrane stress. Two intersecting null
 traces inherited from the global preparation fix the receiving field across
-$v=\pi/2$ without resetting the state (commit `480d4081`).
+$v=\pi/2$ without resetting the state.
 
 ## 3. One source, three connected crossing numbers
 
@@ -295,14 +353,11 @@ $$
 so the $88.4735\%$ crossing fraction and the area coefficient encode the same
 conserved source. Gibbons--Hawking and [Zhao](https://arxiv.org/abs/2503.16138)
 supply the physical-process framework; the source normalization and
-finite-section correction are the atlas's calculation, recorded in the
-[flux/area/handoff derivation](../docs/nsc-atlas-parent-circulation.md).
+finite-section correction are the atlas's calculation (Appendix A.10).
 
 ![The inherited source, horizon response and conserved transfer](figures/nsc-atlas-horizon-response.png)
 
 ## 4. Pre-registered test: does the flow select today's vacuum fraction?
-
-<!-- nsc-claim:flow-vacuum-identifiability -->
 
 NSC-P006 freezes a single requested output before calculation:
 
@@ -311,9 +366,8 @@ $$
 \qquad |\Omega_{\Lambda,0}-0.685|\leq 0.007.
 $$
 
-The [protocol](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json)
-tests whether the isolated single-horizon scalar flow above selects the
-[Planck base-$\Lambda\mathrm{CDM}$ inference](https://arxiv.org/abs/1807.06209)
+The protocol tests whether the isolated single-horizon scalar flow above selects
+the [Planck base-$\Lambda\mathrm{CDM}$ inference](https://arxiv.org/abs/1807.06209)
 without reusing the supplied parent vacuum or fitting an epoch. Because
 
 $$
@@ -331,16 +385,12 @@ $$
 leaves the receiving pressure $p_-$, volume evolution, and initial density
 unselected when only an injection rate $q_-$ is supplied. Likewise, the phase
 map $\phi_n=\frac{1}{2}n(n-1)\alpha$ is invariant under monotone clock
-reparametrizations $t(n)$. The
-[evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
-and [thermodynamic proof](../docs/nsc-atlas-offset-thermodynamics.md) therefore
-return **$\Omega_{\Lambda,\mathrm{today}}$ unselected** under an isolated
+reparametrizations $t(n)$. The pre-registered evaluation therefore returns
+**$\Omega_{\Lambda,\mathrm{today}}$ unselected** under an isolated
 single-horizon scalar flux, proving that a variational two-valve receiving law
 (Section 9) is required.
 
 ## 5. What continues across zero: pressure and the late tail
-
-<!-- nsc-claim:receiving-field-pressure -->
 
 Beyond the smooth horizon at the declared apparatus event $t=5.278190092198$
 on the maximum-transfer axis, the comoving tetrad stress components are
@@ -350,9 +400,8 @@ $$
 p=\frac{\Pi^2-|D\chi|^2/3-\mu^2\chi^2}{2},
 $$
 
-where $p$ is the isotropic trace part of the spatial stress. The
-[calculated receiver](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
-gives $\rho/\epsilon^2=0.0624287161642$, $p/\epsilon^2=0.0450251156252$, and
+where $p$ is the isotropic trace part of the spatial stress. The calculated
+receiver gives $\rho/\epsilon^2=0.0624287161642$, $p/\epsilon^2=0.0450251156252$, and
 
 $$
 w_{-,\mathrm{receiver}}=0.7212244363,\qquad w_--(-1)=1.7212244363.
@@ -368,8 +417,9 @@ $$
 \qquad \langle|D\chi|^2\rangle\propto a^{-5}.
 $$
 
-Thus the rescaled phase survives while the background-subtracted late-field
-vacuum shift vanishes ($\Delta\Lambda\,L_{\mathrm{ref}}^2=0$).
+Thus the rescaled phase survives with a cold, pressureless dust equation of
+state ($w_\chi=\langle p_\chi\rangle/\langle\rho_\chi\rangle\to 0$) while the
+background-subtracted late-field vacuum shift vanishes ($\Delta\Lambda\,L_{\mathrm{ref}}^2=0$).
 
 ## 6. Finite amplitude: admissibility and the child criterion
 
@@ -383,12 +433,10 @@ $$
 \qquad z=\frac{\mu^2}{H^2}.
 $$
 
-The [finite-amplitude theorem](../docs/nsc-atlas-finite-parent-data.md) proves
-that a smooth positive invariant solution exists for every $0\leq\epsilon\leq 1$
-when $z>33$ (satisfied by the retained $z=8329.074464994$, via a weighted
-equivariant Hebey--Vaugon compactness bound $61/88<1$; see the
-[record](../results/summaries/nsc-atlas-finite-parent-data-v1.json)). On any
-time-symmetric initial surface ($K_{ij}=0$), the future null expansions satisfy
+A smooth positive invariant solution exists for every $0\leq\epsilon\leq 1$
+when $z>33$ (satisfied by the retained $z=8329.074464994$ via a weighted
+equivariant Hebey--Vaugon compactness bound $61/88<1$). On any time-symmetric
+initial surface ($K_{ij}=0$), the future null expansions satisfy
 
 $$
 \theta_+=H_{\mathrm{surface}},\qquad\theta_-=-H_{\mathrm{surface}},\qquad
@@ -399,9 +447,6 @@ so no surface is strictly future-trapped initially; genuine trapping requires
 dynamical evolution to $\theta_\pm<0$ on a common closed surface.
 
 ### 6.1 The unchanged parent drives its internal geometry
-
-<!-- nsc-claim:parent-driven-mechanical-transfer -->
-<!-- Evidence binding: [actual force decomposition](../results/summaries/nsc-atlas-parent-release-v2.json) -->
 
 Varying the internal-scale action for $K_s=84$ gives
 
@@ -418,18 +463,12 @@ $$
 =6\mu^2\chi^2u(s)+K_su(s)P_u^{ab}\nabla_a\nabla_bs,
 $$
 
-separating scalar-wave driving from spatial-Laplacian transport
-([derivation and controls](../docs/nsc-atlas-valve-formation.md)).
+separating scalar-wave driving from spatial-Laplacian transport.
 
-<!-- nsc-claim:parent-driven-finite-volume -->
-
-The [source-bound readout](../results/summaries/nsc-atlas-parent-release-v2.json)
-measures $+0.11015$ wave work through proper duration $0.9$, opposed by
-$-0.02810$ spatial-Laplacian work (raising $e_s$ from $0.22098$ to $0.31065$
-toward the bare barrier $0.35454$). Continuing the complete Cauchy state to
-proper duration $1.2$ in the
-[continuation comparison](../results/summaries/nsc-atlas-parent-release-continuation-v1.json)
-gives:
+The source-bound readout measures $+0.11015$ wave work through proper duration
+$0.9$, opposed by $-0.02810$ spatial-Laplacian work (raising $e_s$ from $0.22098$
+to $0.31065$ toward the bare barrier $0.35454$). Continuing the complete Cauchy
+state to proper duration $1.2$ gives:
 
 | Quantity | Degree 20 | Degree 24 |
 | --- | ---: | ---: |
@@ -438,13 +477,11 @@ gives:
 | Hamiltonian residual / $H_{\mathrm{ref}}^2$ | $0.03632$ | $0.01180$ |
 
 Thus the unchanged parent drives $49.8\%$ internal-volume growth over this
-finite window. The [fixed-boundary check](../results/summaries/nsc-atlas-parent-release-surface-v1.json)
-shows positive outgoing expansion ($0.37548$ to $0.65660$) at proper duration
-$1.2$, so no future-trapped boundary forms in the equal two-mode preparation.
+finite window. The fixed-boundary check shows positive outgoing expansion
+($0.37548$ to $0.65660$) at proper duration $1.2$, so no future-trapped
+boundary forms in the equal two-mode preparation.
 
 ![Wave work, opposing spatial transport and actual internal mechanical energy](figures/nsc-atlas-parent-release.png)
-
-<!-- nsc-claim:one-mode-trapped-neck -->
 
 Placing the same excitation energy into the lowest odd harmonic $\chi=\epsilon A X_1$
 with $\kappa A^2=24/(z+3)$ makes both initial expansions vanish on the
@@ -455,15 +492,11 @@ $$
 =3-\left(1+\frac{\kappa\epsilon^2A^2}{2}\right)\Psi(0)^{-4}.
 $$
 
-The [calculated threshold](../results/summaries/nsc-atlas-valve-neck.json) is
-$\epsilon_{\mathrm{crit}}=0.8339066143$. At $\epsilon=1$, $\dot\theta_\pm/H^2=-1.30468$
-and both expansions become strictly negative ($\theta_\pm/H=-0.00707954$ at
-proper time $0.02$), agreeing with the
-[independent nonspherical GH implementation](../results/summaries/nsc-atlas-valve-neck-gh-v1.json)
-within $0.0043\%$ and continuing to proper time $0.3$ in the
-[spherical ledger](../results/summaries/nsc-atlas-valve-spherical-v1.json).
-
-<!-- nsc-claim:one-mode-regional-ledger -->
+The calculated trapping threshold is $\epsilon_{\mathrm{crit}}=0.8339066143$. At
+$\epsilon=1$, $\dot\theta_\pm/H^2=-1.30468$ and both expansions become strictly
+negative ($\theta_\pm/H=-0.00707954$ at proper time $0.02$), agreeing with the
+independent nonspherical generalized-harmonic implementation within $0.0043\%$
+and continuing to proper time $0.3$.
 
 Inside the strict trap at proper time $0.2$, the trapped band has volume
 $16.7765$, energy $3.77629$, mean stress ratio $w=-0.96573$ (excitation ratio
@@ -474,27 +507,14 @@ $$
 +24.18268_{\mathrm{boundary\ sweep}}=24.42675,
 $$
 
-closing to $1.69\times 10^{-8}$ in the
-[moving-region ledger](../results/summaries/nsc-atlas-valve-spherical-v1.json)
-([formation owner](../docs/nsc-atlas-valve-formation.md)).
-
-<!-- nsc-claim:same-state-conformal-continuation -->
-
-The [same-state conformal continuation](../results/summaries/nsc-atlas-valve-conformal-v1.json)
-carries the center from proper time $2.0$ to $3.9455$ (areal radius
-$0.654973\pm 0.00000366$, expansions $\theta_\pm/H\approx -11.8488$), and the
-<!-- nsc-claim:receiver-state-source-link -->
-[controlled local restart](../results/summaries/nsc-atlas-valve-restart-v1.json)
-reaches radius $0.15$, where the
-[source gate](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
-quantifies the required bounce pressure. Adding a Dirac candidate on that
-internal geometry gives $m_{F,0}^2=3\Delta M_{B,\mathrm{KK}}^2$, bare channel
-splitting $\Delta(EL)/g=0.01004157$ in the
-[parent modes](../results/summaries/nsc-atlas-valve-dirac-modes-v1.json),
-nonzero low-mode mixing in the
-[onset response](../results/summaries/nsc-atlas-valve-dirac-onset-v1.json), and
-$71.58\%$ off-diagonal mixing weight in the
-[complete radial source operator](../results/summaries/nsc-atlas-valve-dirac-source-v1.json).
+closing to $1.69\times 10^{-8}$. Same-state conformal continuation carries the
+center from proper time $2.0$ to $3.9455$ (areal radius $0.654973\pm 0.00000366$,
+expansions $\theta_\pm/H\approx -11.8488$), and controlled local restart reaches
+radius $0.15$, where the source gate quantifies the required bounce pressure.
+Adding a Dirac candidate on that internal geometry gives $m_{F,0}^2=3\Delta M_{B,\mathrm{KK}}^2$,
+bare channel splitting $\Delta(EL)/g=0.01004157$, nonzero low-mode mixing in the
+onset response, and $71.58\%$ off-diagonal mixing weight in the complete radial
+source operator.
 
 ## 7. Selection and the charge-resolved question
 
@@ -513,43 +533,37 @@ scalar flux has zero signed charge transfer; directional orientation parity and
 spectral asymmetry require the signed-zero crossing (**A2**) and moving
 spectral band (**A3**) derived in Section 9.
 
-## 8. Outward status of the single-horizon control vs. the preserved atlas
+## 8. Outward status of the single-horizon control vs. the two-valve foundation
 
 | Requested quantity | Isolated single-horizon scalar control (Sections 2--7) | Two-valve `A0--A4` foundation (Section 9) |
 | --- | --- | --- |
-| Budget curve $(D,M,V)$ | Unselected by null horizon flux alone (NSC-P006) | Exact zero-parameter cubic $9DVB=4(V+B/2)^3$, $B=M-D/3$ (Theorem 1) |
+| Budget curve $(D,M,V)$ & EoS $w$ | Unselected by null horizon flux alone (NSC-P006) | Exact zero-parameter cubic $9DVB=4(V+B/2)^3$, $w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$ (Theorem 1) |
 | Exponential dilution wall | Late excitation dilutes as $a^{-3}$ | Three $O(1)$ geometric bypasses + `(1,1,1)` 3D triad ground state & hard core (Theorem 2) |
 | Surrounding-flow partition | Conditional receiver $w_-=0.721224$ at readout event | Exact parameter-free $3:1$ Virial split $T_{\mathrm{ext}}:W_{\mathrm{flow}}=3:1$ (Theorem 3) |
 | Child opening & horizon cutoff | Requires supplied negative pressure at $r\to 0$ | Continuum opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$ & last-echo cutoff (Theorem 4) |
 | Neck splitting & 3D cascade | One-mode trapped neck at $\epsilon_{\mathrm{crit}}=0.8339066$ | Whole-exterior onset $p^3-3p-3=0$ & 3-axis cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ (Theorems 5--6) |
 
 Appendix A summarizes the nine preserved technical engines (`A.1--A.9`) and
-links to the complete historical archive.
+provides the complete reproducibility index (`A.10`).
 
 ## 9. The Non-Local Multiverse to Local Observer Atlas (Axioms A0--A4)
-
-<!-- nsc-claim:nonlocal-to-local-atlas-readout -->
 
 Whereas Sections 2--8 showed that an isolated single-horizon scalar flow without
 a variational receiving law leaves $\Omega_{\Lambda,0}$, child opening, and
 $\eta_B$ unselected, evaluating the five geometric axioms (**A0--A4**) across
 the coupled `+`/`0`/`-` system yields six parameter-free geometric and dynamical
 theorems (Sections 9.1--9.6), followed in Section 9.7 by the observer dictionary
-and strict quarantine of secondary closure ansätze. All derivations, symbolic
-proofs, and numerical checks are executable in
-[`src/recursive_horizons/nsc_atlas_offset_generator.py`](../src/recursive_horizons/nsc_atlas_offset_generator.py)
-and documented in the [offset-generator owner](../docs/nsc-atlas-offset-generator.md)
-and the [non-local-to-local atlas record](../results/summaries/nsc-nonlocal-to-local-atlas-v1.json).
+and strict quarantine of secondary closure ansätze.
 
 ![Non-local multiverse geometry to local observer readout](figures/nsc-nonlocal-to-local-atlas.png)
 
-### 9.1 Theorem 1: The unified 5-variable least-resistance cycle and exact algebraic budget surface
+### 9.1 Theorem 1: The unified 5-variable least-resistance cycle, exact algebraic budget surface, and Friedmann equations of state
 
 Under parent spherical convergence $\lambda_1=\lambda_2=\xi=e^{-\chi}$ in the
 infall region (`+`), radial scale $\lambda_3$, child principal scales
 $(\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3)$ across `0` (`-`), and
 transferred turn fraction $\theta\in(0,1)$ ($m_+=m_0(1-\theta)^2$, $m_-=m_0\theta^2$),
-the single **A0** generator cost functional is
+the reduced **A0** Hamiltonian functional (Proposition 1.1) is
 
 $$
 E(\lambda_3,\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3,\theta;\chi)
@@ -560,7 +574,7 @@ $$
 Simultaneous stationarity $\partial E/\partial\lambda_3=0$,
 $\partial E/\partial\tilde{\lambda}_i=0$, and $\partial E/\partial\theta=0$
 (with strictly positive-definite $5\times 5$ Hessian) gives the unique
-closed-form global minimum (for normalized $m_0=PV_0=V_0=1$):
+closed-form global minimum (in normalized units $m_0=PV_0=V_0=1$):
 
 $$
 \sqrt{\theta^*(\chi)}=\frac{\sqrt{16e^{2\chi}+17}-3}{4e^\chi},
@@ -568,118 +582,161 @@ $$
 \qquad \tilde{\lambda}_1^*=\tilde{\lambda}_2^*=\tilde{\lambda}_3^*=\sqrt{\theta^*(\chi)}.
 $$
 
-Four exact parameter-free consequences follow from this single variational
+Five exact parameter-free consequences follow from this single variational
 minimum without fluid incompressibility or borrowed surface tension:
 
-1. **Infall parcel shrinkage and 1D spaghettification (`+`):** The infalling
-   parcel volume shrinks as $V_+^*(\chi)=(1-\theta^*)e^{-\chi}\sim\frac{3}{2}e^{-2\chi}\to 0$,
-   while its aspect ratio $\lambda_3^*/\xi=(1-\theta^*)e^{2\chi}\sim\frac{3}{2}e^{+\chi}\to\infty$
-   stretches into a 1D filament for all $\chi>\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.34657359$
-   (where $\theta^*=1/2$ and the aspect ratio equals $1$).
-2. **Rounding into a 3D sphere across `0` (`-`):** By the arithmetic--geometric
-   mean inequality on $\sum_{i=1}^3\theta^2/\tilde{\lambda}_i+\tilde{\lambda}_1\tilde{\lambda}_2\tilde{\lambda}_3$,
-   the child scales satisfy $\tilde{\lambda}_1^*=\tilde{\lambda}_2^*=\tilde{\lambda}_3^*=\sqrt{\theta^*}$
-   (aspect ratio $1$, a round 3D sphere) and obey the exact $3:1$ Virial lock
-   $Q_{\mathrm{stretch},-}^*=3(\theta^*)^{3/2}=3W_{\mathrm{ext},-}^*$.
-3. **Derived volume takeover:** The `-` sphere's share of the two-region volume,
-   $f_{\mathrm{drop}}^*(\chi)=V_-^*/(V_+^*+V_-^*)$ with $V_-^*=(\theta^*)^{3/2}$,
-   grows monotonically from $37.90\%$ ($\chi=0$) to $84.63\%$ ($\chi=1$),
-   $97.73\%$ ($\chi=2$), and $99.95\%$ ($\chi=4$).
-4. **Exact zero-parameter algebraic budget surface (`exact_budget_curve_invariant`):**
-   At any compression $\chi$, the minimum cost $E^*(\chi)=E_{\mathrm{DE}}^*+E_{\mathrm{DM}}^*+E_{\mathrm{vis}}^*$
-   partitions into isotropic child expansion stretch $E_{\mathrm{DE}}^*=3(\theta^*)^{3/2}$,
-   two-sided horizon/infall boundary load $E_{\mathrm{DM}}^*=(\theta^*)^{3/2}+2(1-\theta^*)e^{-\chi}$,
-   and active 1D filament stretch $E_{\mathrm{vis}}^*=2(1-\theta^*)^2e^\chi$.
-   Writing $D=\Omega_{\mathrm{DE}}$, $M=\Omega_{\mathrm{DM}}$, $V=\Omega_{\mathrm{vis}}$
-   ($D+M+V=1$) and $B=M-D/3$ for the radial infall share, eliminating both
-   $(\theta^*,\chi)$ yields the exact parameter-free algebraic curve
+- **(1) Infall parcel shrinkage and 1D spaghettification (`+`):** The infalling
+  parcel volume shrinks as $V_+^*(\chi)=(1-\theta^*)e^{-\chi}\sim\frac{3}{2}e^{-2\chi}\to 0$,
+  while its aspect ratio $\lambda_3^*/\xi=(1-\theta^*)e^{2\chi}\sim\frac{3}{2}e^{+\chi}\to\infty$
+  stretches into a 1D filament for all $\chi>\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.34657359$
+  (where $\theta^*=1/2$ and the aspect ratio equals $1$).
+- **(2) Rounding into a 3D sphere across `0` (`-`):** By the arithmetic--geometric
+  mean inequality on $\sum_{i=1}^3\theta^2/\tilde{\lambda}_i+\tilde{\lambda}_1\tilde{\lambda}_2\tilde{\lambda}_3$,
+  the child scales satisfy $\tilde{\lambda}_1^*=\tilde{\lambda}_2^*=\tilde{\lambda}_3^*=\sqrt{\theta^*}$
+  (aspect ratio $1$, a round 3D sphere) and obey the exact $3:1$ Virial lock
+  $Q_{\mathrm{stretch},-}^*=3(\theta^*)^{3/2}=3W_{\mathrm{ext},-}^*$.
+- **(3) Derived volume takeover:** The `-` sphere's share of the two-region volume,
+  $f_{\mathrm{drop}}^*(\chi)=V_-^*/(V_+^*+V_-^*)$ with $V_-^*=(\theta^*)^{3/2}$,
+  grows monotonically from $37.90\%$ ($\chi=0$) to $84.63\%$ ($\chi=1$),
+  $97.73\%$ ($\chi=2$), and $99.95\%$ ($\chi=4$).
+- **(4) Exact zero-parameter algebraic budget surface:**
+  At any compression $\chi$, the minimum cost $E^*(\chi)=E_{\mathrm{DE}}^*+E_{\mathrm{DM}}^*+E_{\mathrm{vis}}^*$
+  partitions into isotropic child expansion stretch $E_{\mathrm{DE}}^*=3(\theta^*)^{3/2}$,
+  two-sided horizon/infall boundary load $E_{\mathrm{DM}}^*=(\theta^*)^{3/2}+2(1-\theta^*)e^{-\chi}$,
+  and active 1D filament stretch $E_{\mathrm{vis}}^*=2(1-\theta^*)^2e^\chi$.
+  Writing $D=\Omega_{\mathrm{DE}}$, $M=\Omega_{\mathrm{DM}}$, $V=\Omega_{\mathrm{vis}}$
+  ($D+M+V=1$) and $B=M-D/3=2(1-\theta^*)e^{-\chi}/E^*$ for the radial infall
+  share, stationarity $2(1-\theta^*)e^\chi+e^{-\chi}=3\sqrt{\theta^*}$ implies
+  $2V+B=6(1-\theta^*)\sqrt{\theta^*}/E^*$. Eliminating both $(\theta^*,\chi)$
+  yields the exact parameter-free algebraic curve and its exact inverse map:
 
-   $$
-   9DVB=4\left(V+\frac{B}{2}\right)^3,\qquad
-   \theta^*=\frac{1}{1+2V/B},\qquad
-   e^{2\chi}=\frac{2V+B}{B}\sqrt{\frac{2V+B}{3DV}},
-   $$
+$$
+9DVB=4\left(V+\frac{B}{2}\right)^3,\qquad
+\theta^*=\frac{D}{D+V+B/2},\qquad
+e^{-\chi}=\frac{3\sqrt{\theta^*}\,B}{2V+B}\quad\left(e^{2\chi}=\frac{V(D+V+B/2)}{B(V+B/2)}\right),
+$$
 
-   with deep-compression invariant $\lim_{\chi\to\infty}B/V^2=16/27$. Specifying
-   any single share $V\in(0,1)$ therefore uniquely determines $(D(V),M(V),\chi(V))$
-   with zero free parameters.
+  with deep-compression invariant $\lim_{\chi\to\infty}B/V^2=16/27$. Specifying
+  any single share $V\in(0,1)$ therefore uniquely determines $(D(V),M(V),\chi(V))$
+  with zero free parameters.
+- **(5) Derived Friedmann equations of state ($w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $w_{\mathrm{baryon}}=0$):**
+  In the expanding child room of physical 3-volume
+  $V_-=V_0\tilde{\lambda}_1^*\tilde{\lambda}_2^*\tilde{\lambda}_3^*=V_0(\theta^*)^{3/2}=V_0 a_-^3$
+  (with isotropic child scale factor $a_-=\sqrt{\theta^*}$), the thermodynamic
+  energy densities $\rho_X=E_X^*/V_-$ and pressures $p_X=-\partial E_X^*/\partial V_-$
+  of the three sectors follow directly by differentiation:
+  - *Dark Energy sector ($w_{\mathrm{DE}}=-1$):* Because $E_{\mathrm{DE}}^*=3PV_0(\theta^*)^{3/2}=3PV_-$
+    is strictly proportional to the child volume $V_-$, its energy density is
+    constant and its thermodynamic pressure is equal and opposite:
+
+$$
+\rho_{\mathrm{DE}}=\frac{E_{\mathrm{DE}}^*}{V_-}=3P=\mathrm{const},\qquad
+p_{\mathrm{DE}}=-\frac{\partial E_{\mathrm{DE}}^*}{\partial V_-}=-3P=-\rho_{\mathrm{DE}}
+\Longrightarrow w_{\mathrm{DE}}\equiv\frac{p_{\mathrm{DE}}}{\rho_{\mathrm{DE}}}=-1,
+$$
+
+    satisfying the Friedmann vacuum continuity equation $\dot{\rho}_{\mathrm{DE}}+3H_-(\rho_{\mathrm{DE}}+p_{\mathrm{DE}})=0$ identically.
+  - *Dark Matter sector ($w_{\mathrm{DM}}=0$, $c_{s,\mathrm{DM}}^2=0$):* The two-sided
+    `0`-horizon enclosing and radial infall load $E_{\mathrm{DM}}^*$ acts through
+    boundary normal stress at the `0` valves rather than doing local pressure work
+    on an interior adiabatic bulk parcel $\delta V_{\mathrm{bulk}}$ at fixed
+    transferred state $(\theta^*,\chi)$:
+
+$$
+p_{\mathrm{DM},\mathrm{bulk}}=-\left.\frac{\partial E_{\mathrm{DM}}^*}{\partial V_{\mathrm{bulk}}}\right|_{\theta^*,\chi}=0,\qquad
+\rho_{\mathrm{DM}}(a_-)=\frac{E_{\mathrm{DM}}^*}{V_0 a_-^3}\propto a_-^{-3}
+\Longrightarrow w_{\mathrm{DM}}\equiv\frac{p_{\mathrm{DM},\mathrm{bulk}}}{\rho_{\mathrm{DM}}}=0,\quad
+c_{s,\mathrm{DM}}^2=0.
+$$
+
+    This matches the covariant massive-scalar late tail derived in Section 5
+    ($y=a^{3/2}\chi$, $\langle\rho_\chi\rangle\propto a^{-3}$,
+    $w_\chi=\langle p_\chi\rangle/\langle\rho_\chi\rangle\to 0$,
+    $\langle|D\chi|^2\rangle\propto a^{-5}$), showing that both the boundary load
+    and the transmitted massive scalar tail behave dynamically as cold,
+    pressureless dust.
+  - *Crystallized baryonic triads ($w_{\mathrm{baryon}}=0$):* Active 1D filaments
+    crystallize into localized `(1,1,1)` 3D standing-wave triads (Theorem 2) whose
+    rest energy $E^*(1,1,1)=4(PV_0)^{1/4}m_0^{3/4}$ is independent of the
+    macroscopic bulk volume $V_{\mathrm{bulk}}$, giving
+    $p_{\mathrm{baryon}}=-\partial E^*(1,1,1)/\partial V_{\mathrm{bulk}}=0$ and
+    $w_{\mathrm{baryon}}=0$.
 
 ### 9.2 Theorem 2: Universal exponential-wall bypasses, the `(1, 1, 1)` orthogonal triad ground state, and hard-core repulsion
 
 Whenever compression or winding in a lower-dimensional or single-signed regime
 hits an exponential or superlinear resistance wall, **A0 (Path of Least
 Resistance)** proves that the winning trajectory bypasses the wall by opening a
-new orthogonal degree of freedom or crossing `0` into `-`
-(`exponential_wall_bypasses_and_triad_winner` and
-`derived_three_accumulator_bubble_ladder`):
+new orthogonal degree of freedom or crossing `0` into `-`:
 
-1. **Wall 1 — 1D Axial Compression Wall $\to$ Helical Buckling Plateau (`1D -> 2D/3D`):**
-   Compressing a straight 1D line ($\omega=0$) hits the exponential wall
-   $E_{1\mathrm{D}}(\chi)=e^{+\chi}\to\infty$. Above $\chi>0$, buckling sideways
-   into a helix with $v_\perp^*=\sqrt{1-e^{-2\chi}}$ bypasses the wall and caps
-   the cost at the finite plateau
+- **(1) Wall 1 — 1D Axial Compression Wall $\to$ Helical Buckling Plateau (`1D -> 2D/3D`):**
+  Compressing a straight 1D line ($\omega=0$) hits the exponential wall
+  $E_{1\mathrm{D}}(\chi)=e^{+\chi}\to\infty$. Above $\chi>0$, buckling sideways
+  into a helix with $v_\perp^*=\sqrt{1-e^{-2\chi}}$ bypasses the wall and caps
+  the cost at the finite plateau
 
-   $$
-   E_{\mathrm{helix}}^*(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.
-   $$
+$$
+E_{\mathrm{helix}}^*(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.
+$$
 
-2. **Wall 2 — 3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau (`+ -> 0 -> -`):**
-   Forcing all winding to remain in the parent `+` region ($\theta=0$) hits the
-   exponential wall $E_{\mathrm{stay},+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$.
-   Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
-   bypasses the wall and caps the 5-variable cost at the finite plateau
+- **(2) Wall 2 — 3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau (`+ -> 0 -> -`):**
+  Forcing all winding to remain in the parent `+` region ($\theta=0$) hits the
+  exponential wall $E_{\mathrm{stay},+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$.
+  Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
+  bypasses the wall and caps the 5-variable cost at the finite plateau
 
-   $$
-   E_{\mathrm{5-var}}^*(\chi)=4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.
-   $$
+$$
+E_{\mathrm{5-var}}^*(\chi)=4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.
+$$
 
-3. **Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Hard Core:**
-   Piling $N\geq 2$ integer windings onto a single axis costs
-   $E_{\mathrm{single}}(N)\propto N^{3/2}>N$ ($2^{3/2}\approx 2.828>2$,
-   $3^{3/2}\approx 5.196>3$). Distributing integer windings
-   $(n_1,n_2,n_3)\in\mathbb{Z}_{\geq 0}^3$ ($m_i=m_0 n_i^2$) across the three
-   orthogonal axes of 3D space gives the exact **A0** minimum
+- **(3) Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Hard Core:**
+  Piling $N\geq 2$ integer windings onto a single axis costs
+  $E_{\mathrm{single}}(N)\propto N^{3/2}>N$ ($2^{3/2}\approx 2.828>2$,
+  $3^{3/2}\approx 5.196>3$). Distributing integer windings
+  $(n_1,n_2,n_3)\in\mathbb{Z}_{\geq 0}^3$ ($m_i=m_0 n_i^2$) across the three
+  orthogonal axes of 3D space gives the exact **A0** minimum
 
-   $$
-   E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},
-   \qquad \lambda_i^*=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.
-   $$
+$$
+E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},
+\qquad \lambda_i^*=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.
+$$
 
-   - $N=1$ `(1, 0, 0)` (1D loop) and $N=2$ `(1, 1, 0)` (2D sheet) have zero 3D
-     volume ($V^*=0$) and collapse along their unwound axes under 3D pressure
-     (likewise, under iterated **A1** binomial windings $W_k(n)=\binom{n}{k}$,
-     $n=3$ is the minimum integer with $W_1W_2W_3=9>0$ supporting a 3D volume,
-     with untuned ratio $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$).
-   - **$N=3$ `(1, 1, 1)` is the unique minimum-cost 3D ground state:**
-     $E^*(1,1,1)=4.0$, cost per winding $4/3\approx 1.3333$, and isotropic
-     aspect ratios $1:1:1$ (a round sphere). In the continuum spherical wave
-     cavity $\psi_{n_1,n_2,n_3}(r,\theta,\phi)$, the lowest mode with non-trivial
-     radial, polar, and azimuthal quantum numbers is likewise `(1, 1, 1)` with
-     eigenvalue $E_{1,1,1}=3\pi^2/R^2$ ($2:1$ energy split against the $S^2$
-     angular floor $\ell(\ell+1)/R^2=2/R^2$) and wave-compression hard-core
-     equilibrium radius $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$.
-   - **$N=4$ `(2, 1, 1)` is the first excited 3D state:** Adding a 4th winding
-     forces doubling on one axis to `(2, 1, 1)`, breaking spherical symmetry
-     into a $4:1:1$ prolate state with higher cost per winding
-     $E^*(2,1,1)/4=\sqrt{2}\approx 1.4142>4/3$ (excitation gap
-     $\Delta E=4(\sqrt{2}-1)\approx 1.6569$).
-   - **Medium-range attraction + short-range hard-core repulsion:** Two `(1, 1, 1)`
-     triads separated by $d>2R^*$ attract via shared surrounding flow
-     ($\Delta E_{\mathrm{flow}}=-2m_0/d<0$), reaching a bound minimum at contact
-     $d=2R^*$ ($E_{\mathrm{contact}}=8.0-1.0=7.0$). Merging them into a single
-     `(2, 2, 2)` bubble at $d\to 0$ costs $E^*(2,2,2)=8\sqrt{2}\approx 11.3137>8.0$,
-     erecting an exact **short-range hard-core repulsion barrier**
-     $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)\approx +3.3137$.
-4. **Three geometric mechanisms bypassing $e^{-3K}$ volumetric dilution:**
-   Across nested transitions, naive homogeneous 3D volume averaging dilutes by
-   $e^{-3K}$, whereas three scale-free geometric observables survive at $O(1)$:
-   (i) the logarithmic scale-invariant measure $\int_{\lambda_{\min}(\chi)}^{\lambda_{\max}(\chi)} d\lambda/\lambda=\ln(\lambda_{\max,0}/\lambda_{\min,0})$
-   is strictly invariant ($\partial_\chi I_{\mathrm{log}}=0$); (ii) active
-   vortex-tube concentration $A_{\mathrm{tube}}(\chi)=A_0e^{-2\chi}$ with core
-   vorticity $\omega_{\mathrm{core}}(\chi)=\omega_0e^{+2\chi}$ preserves the
-   Helmholtz circulation weight $w_{\mathrm{tube}}(\chi)=1$; and (iii) the
-   topological zero-mode phase integral across the signed-zero crossing equals
-   $\Delta\theta/\pi=1/2$ independently of $K$.
+  - *Lower-dimensional collapse ($N=1,2$):* $N=1$ `(1, 0, 0)` (1D loop) and $N=2$
+    `(1, 1, 0)` (2D sheet) have zero 3D volume ($V^*=0$) and collapse along their
+    unwound axes under 3D pressure. Likewise, under iterated **A1** binomial
+    windings $W_k(n)=\binom{n}{k}$, $n=3$ is the minimum integer with
+    $W_1W_2W_3=9>0$ supporting a 3D volume, with untuned ratio
+    $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$.
+  - *Unique 3D ground state ($N=3$):* `(1, 1, 1)` is the unique minimum-cost 3D
+    ground state with $E^*(1,1,1)=4.0$, cost per winding $4/3\approx 1.3333$, and
+    isotropic aspect ratios $1:1:1$ (a round sphere). In the continuum spherical
+    wave cavity $\psi_{n_1,n_2,n_3}(r,\theta,\phi)$, the lowest mode with
+    non-trivial radial, polar, and azimuthal quantum numbers is likewise `(1, 1, 1)`
+    with eigenvalue $E_{1,1,1}=3\pi^2/R^2$ ($2:1$ energy split against the $S^2$
+    angular floor $\ell(\ell+1)/R^2=2/R^2$) and wave-compression hard-core
+    equilibrium radius $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$, which bounds the
+    3+1D Kretschmann curvature scalar by $K\propto R_{\mathrm{core}}^{-6}=(\kappa/(2\pi))^3<\infty$.
+  - *First excited 3D state ($N=4$):* Adding a fourth winding forces doubling on
+    one axis to `(2, 1, 1)`, breaking spherical symmetry into a $4:1:1$ prolate
+    state with higher cost per winding $E^*(2,1,1)/4=\sqrt{2}\approx 1.4142>4/3$
+    (excitation gap $\Delta E=4(\sqrt{2}-1)\approx 1.6569$).
+  - *Medium-range attraction and short-range hard-core repulsion:* Two `(1, 1, 1)`
+    triads separated by $d>2R^*$ attract via shared surrounding flow
+    ($\Delta E_{\mathrm{flow}}=-2m_0/d<0$), reaching a bound minimum at contact
+    $d=2R^*$ ($E_{\mathrm{contact}}=8.0-1.0=7.0$). Merging them into a single
+    `(2, 2, 2)` bubble at $d\to 0$ costs $E^*(2,2,2)=8\sqrt{2}\approx 11.3137>8.0$,
+    erecting an exact **short-range hard-core repulsion barrier**
+    $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)\approx +3.3137$.
+- **(4) Three geometric mechanisms bypassing $e^{-3K}$ volumetric dilution:**
+  Across nested transitions, naive homogeneous 3D volume averaging dilutes by
+  $e^{-3K}$, whereas three scale-free geometric observables survive at $O(1)$:
+  (i) the logarithmic scale-invariant measure $\int_{\lambda_{\min}(\chi)}^{\lambda_{\max}(\chi)} d\lambda/\lambda=\ln(\lambda_{\max,0}/\lambda_{\min,0})$
+  is strictly invariant ($\partial_\chi I_{\mathrm{log}}=0$); (ii) active
+  vortex-tube concentration $A_{\mathrm{tube}}(\chi)=A_0e^{-2\chi}$ with core
+  vorticity $\omega_{\mathrm{core}}(\chi)=\omega_0e^{+2\chi}$ preserves the
+  Helmholtz circulation weight $w_{\mathrm{tube}}(\chi)=1$; and (iii) the
+  topological zero-mode phase integral across the signed-zero crossing equals
+  $\Delta\theta/\pi=1/2$ independently of $K$.
 
 ### 9.3 Theorem 3: Surrounding-flow $3:1$ Virial partition, helical buckling, and the damped `+`/`0`/`-` horizon oscillator
 
@@ -701,13 +758,13 @@ $$
 \qquad \frac{W_{\mathrm{flow}}}{T_{\mathrm{ext}}+W_{\mathrm{flow}}}=\frac{1}{4}\ (25\%).
 $$
 
-Similarly, for a static vacuum bubble carrying integer winding $n\in\mathbb{Z}$
-(`vacuum_bubble_crystallization_and_mass_spectrum`), balancing surrounding-flow
-energy $E_{\mathrm{surr}}(R)=m_0 n^2/R$ against cavity work $W_{\mathrm{press}}(R)=PV_0 R^3$
-yields $E_{\mathrm{surr}}^*/W_{\mathrm{press}}^*=3$ ($75\%$ in $r\geq R$ flow,
-$25\%$ in cavity work, $0\%$ in a point singularity), quantized integer loop
-closure $z(1)=z(0)\implies n\in\mathbb{Z}$, and $180^\circ$ two-ripple
-annihilation for $(+1,-1)\to 0$.
+Similarly, for a static vacuum bubble carrying integer winding $n\in\mathbb{Z}$,
+balancing surrounding-flow energy $E_{\mathrm{surr}}(R)=m_0 n^2/R$ against
+cavity work $W_{\mathrm{press}}(R)=PV_0 R^3$ yields
+$E_{\mathrm{surr}}^*/W_{\mathrm{press}}^*=3$ ($75\%$ in $r\geq R$ flow, $25\%$
+in cavity work, $0\%$ in a point singularity), quantized integer loop closure
+$z(1)=z(0)\implies n\in\mathbb{Z}$, and $180^\circ$ two-ripple annihilation for
+$(+1,-1)\to 0$.
 
 When the 1D seed is compressed axially to $\lambda=e^{-\chi}$ under lateral
 confinement $P_\perp$, turning at azimuthal speed $v_\perp=r_\perp\omega$ gives
@@ -746,14 +803,13 @@ $\lambda_{\mathrm{child}}(\tau)=(E_{\mathrm{geom}}(\tau)/(3PV_0))^{1/4}\to\lambd
 
 ### 9.4 Theorem 4: Coupled finite-parent / receiver continuation, zero-radius opening, and last-echo horizon cutoff
 
-The [coupled geometric continuation](../docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation)
-adds explicit phase and geometric inertia to **A0**. Available regional volumes
-are $V_i=R_i^3-\sum_jR_j^3>0$ and path stretches are $\lambda_i=V_i^{1/3}$,
-with the outer radius free. One continuous phase has kinetic weight $\lambda_i$
-and stretch cost $\psi_x^2/(2\lambda_i)$; geometry has logarithmic-boundary
-inertia $\frac{3}{2}\sum_i(\dot{R}_i/R_i)^2$. The parent pressure is derived
-from the wave energy, $P_i=E_i/(3V_i)$, rather than supplied externally, and
-its work and receiving field obey
+Coupled geometric continuation adds explicit phase and geometric inertia to **A0**.
+Available regional volumes are $V_i=R_i^3-\sum_jR_j^3>0$ and path stretches are
+$\lambda_i=V_i^{1/3}$, with the outer radius free. One continuous phase has
+kinetic weight $\lambda_i$ and stretch cost $\psi_x^2/(2\lambda_i)$; geometry
+has logarithmic-boundary inertia $\frac{3}{2}\sum_i(\dot{R}_i/R_i)^2$. The
+parent pressure is derived from the wave energy, $P_i=E_i/(3V_i)$, rather than
+supplied externally, and its work and receiving field obey
 
 $$
 \dot E_i=F_i-E_i\frac{\dot\lambda_i}{\lambda_i},\qquad
@@ -782,13 +838,12 @@ $$
 $M(r)=1/(1+r^2/3)$ satisfies both the finite-distance birth criterion
 $\int_0^\varepsilon\sqrt{M(r)}\,dr<\infty$ and the finite-future optical-reach
 criterion $\int^\infty\sqrt{M(r)}\,dr/r<\infty$ (free-room optical reach
-$0.2611589801$). In the coupled hybrid evolution
-([reference calculation](../results/summaries/nsc-finite-parent-receiver-v1.json)),
-reflected echoes have a sharp launch cutoff at $0.2269423871$ at the mouth and
-$0.1165029354$ at a parent detector $0.01$ material units away, with arrival
-delay diverging as $-\ln(\delta)/\kappa$ and returned energy vanishing linearly
-as $\kappa\delta$. Coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$
-yields the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$
+$0.2611589801$). In the coupled hybrid evolution, reflected echoes have a sharp
+launch cutoff at $0.2269423871$ at the mouth and $0.1165029354$ at a parent
+detector $0.01$ material units away, with arrival delay diverging as
+$-\ln(\delta)/\kappa$ and returned energy vanishing linearly as $\kappa\delta$.
+Coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$ yields
+the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$
 with hybrid last-echo horizon cutoff $\tau_{\mathrm{echo}}=0.87596883$
 ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$ to machine precision, visible
 interior snapshot $25.63\%$) and self-consistent parent curvature backreaction
@@ -815,13 +870,11 @@ transient $-1.0519017014\pm 0.5652358517\,i$ (while the static whole-exterior
 stress balance crosses instability at $p_{\mathrm{crit}}=1+2^{1/3}+2^{-1/3}\approx 2.52988065$,
 corresponding to $(c/R)_{\mathrm{onset}}=0.56786589<(c/R)_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$).
 Along the two-center equipotential neck path, coupling the inner shape
-coordinate $q_1=c^2$ to outgoing even multipoles
-([waveform summary](../results/summaries/nsc-neck-waveform-v1.json)) carries the
-boundary past the static surface barrier ($\Delta A/A_0=+9.4557\%$), pinches the
-neck at offset $3.960294$ ($\Delta\tau_{\mathrm{pinch}}=0.506704$), reaches
-separated lobes $s=1.2$ at $4.264066$, and drives a positive central interior
-observer pulse $\max\phi_C=+0.163689$ with exact analytical pole-sum late-time
-tail
+coordinate $q_1=c^2$ to outgoing even multipoles carries the boundary past the
+static surface barrier ($\Delta A/A_0=+9.4557\%$), pinches the neck at offset
+$3.960294$ ($\Delta\tau_{\mathrm{pinch}}=0.506704$), reaches separated lobes
+$s=1.2$ at $4.264066$, and drives a positive central interior observer pulse
+$\max\phi_C=+0.163689$ with exact analytical pole-sum late-time tail
 
 $$
 \phi_C(T)=-\frac{0.14192836}{T'}+\frac{0.01750496}{(T')^2}+O\left((T')^{-3}\right).
@@ -829,12 +882,10 @@ $$
 
 ### 9.6 Theorem 6: Inherited daughter preparation, three-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, and $2\times 2$ kinetic handoff
 
-At the first split's separated endpoint $s=1.2$
-([inherited daughter summary](../results/summaries/nsc-inherited-daughter-v1.json)),
-each sibling's field induces the other daughter's multipole preparation
-(normalized dipole $-0.07340185$, quadrupole $+0.02750552$, velocity
-$-0.05818555$) without a second supplied seed. Because the exterior phase is
-harmonic ($\Delta\Phi=\partial_{xx}\Phi+\partial_{yy}\Phi+\partial_{zz}\Phi=0$),
+At the first split's separated endpoint $s=1.2$, each sibling's field induces
+the other daughter's multipole preparation (normalized dipole $-0.07340185$,
+quadrupole $+0.02750552$, velocity $-0.05818555$) without a second supplied
+seed. Because the exterior phase is harmonic ($\Delta\Phi=\partial_{xx}\Phi+\partial_{yy}\Phi+\partial_{zz}\Phi=0$),
 the directional enclosed-volume derivative trace vanishes identically at every
 stage:
 
@@ -842,95 +893,97 @@ $$
 \partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0.
 $$
 
-1. **First handoff ($\mathbf{e}_z\to\mathbf{e}_x$, $1\to 2\to 4$ lobes, exact ratio $-1/2$):**
-   After the primary split along $\mathbf{e}_z$, axial symmetry and $\Delta\Phi=0$
-   force $\partial_{\zeta_x}v=\partial_{\zeta_y}v=-\frac{1}{2}\partial_{\zeta_z}v<0$
-   (normalized energy derivative $-0.03151123$ transverse vs. $+0.06302246$
-   axial, **exact ratio $-1/2$**), selecting the transverse axis $\mathbf{e}_x$
-   and pinching the second pair of necks at $b/R=0.62746042$.
-2. **Second handoff ($\mathbf{e}_x\to\mathbf{e}_y$, $4\to 8$ lobes, exact ratio $-2$):**
-   Once the four lobes separate in the $xz$-plane ($b\geq 1.0$), both
-   $\partial_{\zeta_x}v>0$ and $\partial_{\zeta_z}v>0$ become uphill, leaving
-   the third orthogonal axis $\mathbf{e}_y$ as the **unique downhill direction
-   in 3D**; at the symmetric square $b=s=1.2$, four-fold symmetry and
-   $\Delta\Phi=0$ fix the **exact ratio $-2$**
-   ($\partial_{\zeta_y}v=-2\partial_{\zeta_x}v=-2\partial_{\zeta_z}v=-0.11574536<0$),
-   pinching the four planar lobes into eight 3D octant lobes at
-   $c_y/R=0.36044932$ ($b=1.0$) and $0.34722798$ ($b=s=1.2$).
-3. **$B$-independent $2\times 2$ quasistatic kinetic handoff:**
-   At the $(s=1.2, b=0)$ handoff, the identity $\partial_{zz}\Phi_0\equiv\partial_{cc}\Phi_0$
-   gives the exact multipole relation
+- **(1) First handoff ($\mathbf{e}_z\to\mathbf{e}_x$, $1\to 2\to 4$ lobes, exact ratio $-1/2$):**
+  After the primary split along $\mathbf{e}_z$, axial symmetry and $\Delta\Phi=0$
+  force $\partial_{\zeta_x}v=\partial_{\zeta_y}v=-\frac{1}{2}\partial_{\zeta_z}v<0$
+  (normalized energy derivative $-0.03151123$ transverse vs. $+0.06302246$
+  axial, **exact ratio $-1/2$**), selecting the transverse axis $\mathbf{e}_x$
+  and pinching the second pair of necks at $b/R=0.62746042$.
+- **(2) Second handoff ($\mathbf{e}_x\to\mathbf{e}_y$, $4\to 8$ lobes, exact ratio $-2$):**
+  Once the four lobes separate in the $xz$-plane ($b\geq 1.0$), both
+  $\partial_{\zeta_x}v>0$ and $\partial_{\zeta_z}v>0$ become uphill, leaving
+  the third orthogonal axis $\mathbf{e}_y$ as the **unique downhill direction
+  in 3D**; at the symmetric square $b=s=1.2$, four-fold symmetry and
+  $\Delta\Phi=0$ fix the **exact ratio $-2$**
+  ($\partial_{\zeta_y}v=-2\partial_{\zeta_x}v=-2\partial_{\zeta_z}v=-0.11574536<0$),
+  pinching the four planar lobes into eight 3D octant lobes at
+  $c_y/R=0.36044932$ ($b=1.0$) and $0.34722798$ ($b=s=1.2$).
+- **(3) $B$-independent $2\times 2$ quasistatic kinetic handoff:**
+  At the $(s=1.2, b=0)$ handoff, the identity $\partial_{zz}\Phi_0\equiv\partial_{cc}\Phi_0$
+  gives the exact multipole relation
 
-   $$
-   \left.\frac{\partial g_{l,0}}{\partial q_2}\right|_{q_2=0}
-   =-\frac{l-1}{2}\frac{\partial g_{l,0}}{\partial q_1}\qquad (l\geq 2),
-   $$
+$$
+\left.\frac{\partial g_{l,0}}{\partial q_2}\right|_{q_2=0}
+=-\frac{l-1}{2}\frac{\partial g_{l,0}}{\partial q_1}\qquad (l\geq 2),
+$$
 
-   and a strictly positive-definite, $B$-independent $2\times 2$ quasistatic
-   kinetic matrix
+  and a strictly positive-definite, $B$-independent $2\times 2$ quasistatic
+  kinetic matrix
 
-   $$
-   M_{\mathrm{full}}=\begin{pmatrix}
-   0.2074628302 & -0.0054817211 \\
-   -0.0054817211 & 0.6751131619
-   \end{pmatrix},\qquad
-   \det M_{\mathrm{full}}=0.1400308435>0,
-   $$
+$$
+M_{\mathrm{full}}=\begin{pmatrix}
+0.2074628302 & -0.0054817211 \\
+-0.0054817211 & 0.6751131619
+\end{pmatrix},\qquad
+\det M_{\mathrm{full}}=0.1400308435>0,
+$$
 
-   which imparts a nonzero initial transverse conjugate momentum
-   $p_2(0)=+0.05157014>0$ and a positive combined potential-plus-memory drive
-   $-\partial_{q_2}U-R_2=+0.18951641>0$ at the instant of primary pinch.
+  which imparts a nonzero initial transverse conjugate momentum
+  $p_2(0)=+0.05157014>0$ and a positive combined potential-plus-memory drive
+  $-\partial_{q_2}U-R_2=+0.18951641>0$ at the instant of primary pinch.
 
 ### 9.7 Secondary single-valve closure ansätze, non-local-to-local observer dictionary, and quarantine of non-derived coincidences
 
 While Theorem 1 proves the exact parameter-free budget curve
-$9DVB=4(V+B/2)^3$ across all $\chi\geq 0$, selecting a single numerical point
+$9DVB=4(V+B/2)^3$ and the Friedmann equations of state $w_{\mathrm{DE}}=-1$ and
+$w_{\mathrm{DM}}=0$ across all $\chi\geq 0$, selecting a single numerical point
 on that curve or a single rung on the harmonic asymmetry ladder requires an
 additional epoch-selection or freeze-out condition. Two secondary candidate
 closure ansätze have been explored in the atlas:
 
-1. **Candidate single-valve $e^{-3}$ epoch ansatz ($\chi_*=3.0669683518$):**
-   Setting the visible filament share on the $9DVB=4(V+B/2)^3$ curve equal to
-   one 3D volumetric e-fold floor $\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}\approx 4.978707\%$
-   (with combined dark sector $1-e^{-3}\approx 95.021293\%$) selects the root
-   $\chi_*=3.0669683518$:
+- **(1) Candidate single-valve $e^{-3}$ epoch ansatz ($\chi_*=3.0669683518$):**
+  Setting the visible filament share on the $9DVB=4(V+B/2)^3$ curve equal to
+  one 3D volumetric e-fold floor $\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}\approx 4.978707\%$
+  (with combined dark sector $1-e^{-3}\approx 95.021293\%$) selects the root
+  $\chi_*=3.0669683518$:
 
-   | Budget component | Non-local geometric mechanism | Integer 3D e-fold ($\chi=3$) | Single-valve $e^{-3}$ root ($\chi_*=3.0670$) | Virial $3:1$ horizon limit |
-   | --- | --- | ---: | ---: | ---: |
-   | **Dark Energy ($\Omega_{\mathrm{DE}}$)** | Isotropic 3D stretch $3(\theta^*)^{3/2}$ inside `-` sphere | $70.8827\%$ | **$71.1441\%$** | $\frac{3}{4}(1-e^{-3})=71.2660\%$ |
-   | **Dark Matter ($\Omega_{\mathrm{DM}}$)** | Two-sided `0`-wall enclosing + radial infall load | $23.8134\%$ | **$23.8772\%$** | $\frac{1}{4}(1-e^{-3})=23.7553\%$ |
-   | **Combined Dark Sector** | $\Omega_{\mathrm{DE}}+\Omega_{\mathrm{DM}}$ | $94.6961\%$ | **$95.0213\%$ ($1-e^{-3}$)** | $95.0213\%$ ($1-e^{-3}$) |
-   | **Visible Filaments ($\Omega_{\mathrm{vis}}$)** | Active 1D spaghettifying filaments $2(1-\theta^*)^2e^\chi$ | $5.3039\%$ | **$4.9787\%$ ($e^{-3}$)** | $4.9787\%$ ($e^{-3}$) |
+| Budget component | Non-local geometric mechanism & EoS | Integer 3D e-fold ($\chi=3$) | Single-valve $e^{-3}$ root ($\chi_*=3.0670$) | Virial $3:1$ horizon limit |
+| --- | --- | ---: | ---: | ---: |
+| **Dark Energy ($\Omega_{\mathrm{DE}}$)** | Isotropic 3D stretch $3(\theta^*)^{3/2}$ inside `-` sphere ($w_{\mathrm{DE}}=-1$) | $70.8827\%$ | **$71.1441\%$** | $\frac{3}{4}(1-e^{-3})=71.2660\%$ |
+| **Dark Matter ($\Omega_{\mathrm{DM}}$)** | Two-sided `0`-wall enclosing + radial infall load ($w_{\mathrm{DM}}=0$) | $23.8134\%$ | **$23.8772\%$** | $\frac{1}{4}(1-e^{-3})=23.7553\%$ |
+| **Combined Dark Sector** | $\Omega_{\mathrm{DE}}+\Omega_{\mathrm{DM}}$ | $94.6961\%$ | **$95.0213\%$ ($1-e^{-3}$)** | $95.0213\%$ ($1-e^{-3}$) |
+| **Visible Filaments ($\Omega_{\mathrm{vis}}$)** | Active 1D spaghettifying filaments $2(1-\theta^*)^2e^\chi$ | $5.3039\%$ | **$4.9787\%$ ($e^{-3}$)** | $4.9787\%$ ($e^{-3}$) |
 
-2. **Candidate $K=7$ volumetric e-fold harmonic ladder:**
-   Evaluating the half-cycle spectral asymmetry $\eta(\lambda)=\tanh(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}})$
-   along discrete 3D volumetric e-folds $e^{-3K}$ anchored at the spaghettification
-   threshold $e^{-2\chi_{\mathrm{spaghetti}}}=1/2$,
+- **(2) Candidate $K=7$ volumetric e-fold harmonic ladder:**
+  Evaluating the half-cycle spectral asymmetry $\eta(\lambda)=\tanh(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}})$
+  along discrete 3D volumetric e-folds $e^{-3K}$ anchored at the spaghettification
+  threshold $e^{-2\chi_{\mathrm{spaghetti}}}=1/2$,
 
-   $$
-   \eta_K=\tanh\left(\frac{\pi}{2}\,e^{-2\chi_{\mathrm{spaghetti}}}\,e^{-3K}\right)
-   =\tanh\left(\frac{\pi}{4}\,e^{-3K}\right),
-   $$
+$$
+\eta_K=\tanh\left(\frac{\pi}{2}\,e^{-2\chi_{\mathrm{spaghetti}}}\,e^{-3K}\right)
+=\tanh\left(\frac{\pi}{4}\,e^{-3K}\right),
+$$
 
-   gives $\eta_7=\tanh(\frac{\pi}{4}e^{-21})=5.9553290339\times 10^{-10}$ at
-   stage $K=7$ ($3K=21$ volumetric e-folds):
+  gives $\eta_7=\tanh(\frac{\pi}{4}e^{-21})=5.9553290339\times 10^{-10}$ at
+  stage $K=7$ ($3K=21$ volumetric e-folds):
 
-   | 3D harmonic stage $K$ | Volumetric e-folds $3K$ | Scale factor $e^{-3K}$ | Asymmetry $\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ | Regime |
-   | --- | ---: | ---: | ---: | --- |
-   | $K=1$ | $3$ | $4.9787\times 10^{-2}$ | $3.9083\times 10^{-2}$ | Macroscopic filament floor |
-   | $K=3$ | $9$ | $1.2341\times 10^{-4}$ | $9.6926\times 10^{-5}$ | Intermediate vortex cascade |
-   | $K=5$ | $15$ | $3.0590\times 10^{-7}$ | $2.4026\times 10^{-7}$ | Pre-freeze-out cascade |
-   | $K=6$ | $18$ | $1.5230\times 10^{-8}$ | $1.1962\times 10^{-8}$ | Pre-baryonic harmonic |
-   | **$K=7$** | **$21$** | **$7.5826\times 10^{-10}$** | **$5.955329\times 10^{-10}$** | **BBN window $[5.8,6.5]\times 10^{-10}$** |
-   | $K=8$ | $24$ | $3.7751\times 10^{-11}$ | $2.9650\times 10^{-11}$ | Sub-baryonic harmonic |
+| 3D harmonic stage $K$ | Volumetric e-folds $3K$ | Scale factor $e^{-3K}$ | Asymmetry $\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ | Regime |
+| --- | ---: | ---: | ---: | --- |
+| $K=1$ | $3$ | $4.9787\times 10^{-2}$ | $3.9083\times 10^{-2}$ | Macroscopic filament floor |
+| $K=3$ | $9$ | $1.2341\times 10^{-4}$ | $9.6926\times 10^{-5}$ | Intermediate vortex cascade |
+| $K=5$ | $15$ | $3.0590\times 10^{-7}$ | $2.4026\times 10^{-7}$ | Pre-freeze-out cascade |
+| $K=6$ | $18$ | $1.5230\times 10^{-8}$ | $1.1962\times 10^{-8}$ | Pre-baryonic harmonic |
+| **$K=7$** | **$21$** | **$7.5826\times 10^{-10}$** | **$5.955329\times 10^{-10}$** | **BBN window $[5.8,6.5]\times 10^{-10}$** |
+| $K=8$ | $24$ | $3.7751\times 10^{-11}$ | $2.9650\times 10^{-11}$ | Sub-baryonic harmonic |
 
 **Complete Non-Local to Local Observer Dictionary:**
 
 | Non-local multiverse geometry (`A0--A4`) | Local physics label | Derived mathematical relation & calculated readout |
 | --- | --- | --- |
-| Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as pendulum $R(\tau)=R_0\cos(\omega\tau)$ crossing `0` into `-` | Black-hole singularity / Big Bang birth | Smooth crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$); unsigned size $r=\lvert R\rvert\geq 0$ creates an artificial velocity cusp $\Delta\dot{r}=+2R_0\omega$ at $r=0$ |
+| Covariant 3+1D Hamiltonian $\int_V (T^{00}_{\mathrm{phase}}+V(s_*))\,d^3x$ on 1D curve bundles | **A0** least-resistance functional | Exact reduction $E=\sum_{i=1}^3 m_i/\lambda_i+PV_0\lambda_1\lambda_2\lambda_3$ with $P=V(s_*)$ (Proposition 1.1) |
+| Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as $R(\tau)=R_0\cos(\omega\tau)$ + hard core $R_{\mathrm{core}}$ | Black-hole singularity / Big Bang birth | Smooth signed crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$) removes velocity cusp $\Delta\dot{r}=+2R_0\omega$; $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$ and $M(r)=1/(1+r^2/3)$ bound 3+1D curvature scalars |
 | Two half-turns $(-1)\times(-1)=+1$ across two nested `0` crossings ($\mathcal{P}^2=(-I_3)^2=+I_3$) | Parity / orientation restoration across two generations | $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$), $\det(\mathcal{P}^2)=(-1)(-1)=+1$ ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$) |
-| Eliminating $(\theta^*,\chi)$ from 5-variable budget shares $(D,M,V)$ with $B=M-D/3$ | Cosmological dark-sector / baryon partition curve | Exact parameter-free cubic $9DVB=4(V+B/2)^3$, $\lim_{\chi\to\infty}B/V^2=16/27$ |
+| Eliminating $(\theta^*,\chi)$ from 5-variable budget shares $(D,M,V)$ with $B=M-D/3$ | Cosmological dark-sector / baryon partition curve & EoS | Exact cubic $9DVB=4(V+B/2)^3$, $\theta^*=D/(D+V+B/2)$, $w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $\lim_{\chi\to\infty}B/V^2=16/27$ |
 | Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^*=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^*=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^*$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
 | Surrounding-flow Virial lock $T_{\mathrm{ext}}/W_{\mathrm{flow}}=3$ & integer loop closure $z(1)=z(0)$ | Added mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $75\%$ of bubble energy in $r\geq R$ flow, $25\%$ in cavity, $0\%$ in a point; $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
 | Coupled finite-parent / receiver continuation & hybrid radial inertia $M(r)=1/(1+r^2/3)$ | Wave-driven child opening & last-echo horizon cutoff | Zero-radius opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$; last-echo cutoff $\tau_{\mathrm{echo}}=0.87596883$ ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63\%$) |
@@ -938,12 +991,11 @@ closure ansätze have been explored in the atlas:
 
 **Strict quarantine of candidate numerical coincidences not derived from `A0--A4`:**
 To maintain strict separation between proved geometric theorems and post-hoc
-numerical comparisons (`numerical_coincidences_not_derived`), the following
-expressions are explicitly quarantined from the deductive theorems: (i) Lenz's
-1951 number $6\pi^5\approx 1836.1181$ and its dressing
-$6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ (the discrete **A0+A1** binomial
-ladder gives $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$ without a derived
-$\pi^5$ continuum factor); (ii) the threshold $n\text{--}p$ gap formula
+numerical comparisons, the following expressions are explicitly quarantined from
+the deductive theorems: (i) Lenz's 1951 number $6\pi^5\approx 1836.1181$ and its
+dressing $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ (the discrete **A0+A1**
+binomial ladder gives $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$ without a
+derived $\pi^5$ continuum factor); (ii) the threshold $n\text{--}p$ gap formula
 $2+\frac{1}{2}+e^{-3}/\sqrt{2}\approx 2.5352\,m_e$; (iii) selecting rung $K=7$
 on the $\eta_K$ ladder without an independent freeze-out equation (especially
 since Theorem 2 proves three $O(1)$ geometric bypasses of $e^{-3K}$ dilution);
@@ -953,92 +1005,98 @@ ansatz ($71.14\%$ DE / $23.88\%$ DM vs. the coupled dynamical visible snapshot
 $25.63\%$ in Theorem 4 and the Planck base-$\Lambda\mathrm{CDM}$ fit
 $68.47\pm 0.73\%$ DE).
 
-## Appendix A. Technical atlas and preserved mathematical record
+## Appendix A. Technical atlas and reproducibility index
 
-The main argument follows the outward geometric chain. This appendix summarizes
-the nine preserved technical engines (`A.1--A.9`); their complete historical
-chapters, equations, tables, and claim bindings are retained in
+The main argument follows the outward geometric chain. Sections A.1--A.9
+summarize the nine preserved technical engines, and Section A.10 provides the
+complete reproducibility table binding each section to its verified mathematical
+owners and numerical datasets. Complete historical chapters, equations, tables,
+and claim bindings are retained in
 [`paper/technical-atlas-record.md`](technical-atlas-record.md) and in the
 [archived `v0.26.0` foundation volume](archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf).
 
-### A.1. GH evolution engine
+### A.1. Generalized-harmonic evolution engine
 
-The compact nonspherical Einstein/two-scalar GH implementation, exact frame
-derivatives, constraint diagnostics and local operator controls remain
-as implemented in `17098b3c`. It evolves the declared action; its existence
-does not select a cosmic preparation or prove a child. The full technical
-development and [owner](../docs/nsc-atlas-parent-gh.md) are retained in the
-repository record.
+The compact nonspherical Einstein/two-scalar generalized-harmonic (GH)
+implementation, exact frame derivatives, constraint diagnostics and local
+operator controls evolve the declared covariant action of Section 2. Its
+existence does not select a cosmic preparation or prove a child; the full
+technical development is retained in the [GH owner](../docs/nsc-atlas-parent-gh.md).
 
-### A.2. Conditioning
+### A.2. Coordinate conditioning
 
-Metric-dependent lapse feedback and the proper-duration comparisons in
-`487a0b1f` control coordinate conditioning without adding physical stress.
-They remove an imposed coordinate-time ceiling, not an invariant
-singularity or a missing vacuum law. The original equations and evidence
-are retained in the [GH owner](../docs/nsc-atlas-parent-gh.md).
+Metric-dependent lapse feedback and proper-duration comparisons control
+coordinate conditioning without adding physical stress. They remove an imposed
+coordinate-time ceiling rather than an invariant singularity or a missing vacuum
+law, as documented in the [GH owner](../docs/nsc-atlas-parent-gh.md).
 
 ### A.3. Observer readouts
 
-The proper-clock, phase and local stress readouts in `487a0b1f` and
-`2ed1aea0` distinguish lapse/shift coordinates from receiver measurements.
-Their finite apparatus protocols and supplied initial state are preserved.
-They do not identify the receiver event with today's cosmological epoch;
-the [comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
-retains the numerical values and limitations.
+Proper-clock, phase and local stress readouts distinguish lapse/shift
+coordinates from receiver measurements. Their finite apparatus protocols and
+supplied initial state are preserved in the
+[GH comparison record](../results/summaries/nsc-atlas-gh-comparison-v1.json)
+without identifying the receiver event with today's cosmological epoch.
 
 ### A.4. Boson transport
 
-The canonical projection and symplectic matter-probe transport in
-`771c5a78`, `292eb146` and `61124309` propagate perturbations on the supplied
-parent geometry. Reference response norms are not energy fractions;
-incoming covariance and omitted metric fluctuations remain explicit.
-The [boson owner](../docs/nsc-atlas-boson-transport.md) retains the finite
-projections, state assumptions and records.
+Canonical projection and symplectic matter-probe transport propagate
+perturbations on the supplied parent geometry. Reference response norms are not
+energy fractions; incoming covariance and omitted metric fluctuations remain
+explicit in the [boson owner](../docs/nsc-atlas-boson-transport.md).
 
-### A.5. Dense history
+### A.5. Dense polynomial history
 
-The retained DOP853 dense-polynomial history in `771c5a78` supplies
-source-compatible metric/field samples for probe evolution without
-replacing the nonlinear solution by sparse interpolation or extrapolation.
-The [history record](../results/summaries/nsc-atlas-gh-history-v1.json)
-keeps its producer and regeneration route. This computational representation
-does not add a new source history or a physical epoch-selection rule.
+Retained DOP853 dense-polynomial history supplies source-compatible metric and
+field samples for probe evolution without replacing the nonlinear solution by
+sparse interpolation or extrapolation, as recorded in the
+[history summary](../results/summaries/nsc-atlas-gh-history-v1.json).
 
-### A.6. Schur memory
+### A.6. Schur memory kernel
 
-The retarded finite-sector reduction in `61124309` derives the memory
-kernel from the same canonical block evolution. Its noise requires an
-incoming covariance, and initial cross-correlations remain physical data.
-A memory kernel alone is not a vacuum stress. The [owner](../docs/nsc-atlas-boson-transport.md)
-preserves that distinction and the original numbers.
+Retarded finite-sector reduction derives the memory kernel from canonical block
+evolution. Its noise requires an incoming covariance, and initial
+cross-correlations remain physical data; a memory kernel alone is not a vacuum
+stress ([boson owner](../docs/nsc-atlas-boson-transport.md)).
 
-### A.7. Kick and shear
+### A.7. Gravitating kick and shear
 
-The York-constrained momentum preparations and amplitude-independent
-shear/internal-coupling relation in `b69dda73` remain finite conditional
-results. Their source profiles, zero freely supplied transverse-traceless
-datum and vacuum-reference curvature are explicit assumptions. The
-[kick owner](../docs/nsc-atlas-gravitating-kick.md) preserves the full
-derivation and tests.
+York-constrained momentum preparations and amplitude-independent
+shear/internal-coupling relations remain finite conditional results with
+explicit source profiles and vacuum-reference curvature in the
+[kick owner](../docs/nsc-atlas-gravitating-kick.md).
 
-### A.8. Epsilon=.25 controls
+### A.8. Finite-amplitude resolution controls
 
-The three-resolution control in `2ed1aea0` preserves the original
-nonspherical preparation and fixed proper endpoint, with decreasing
-constraint and adjacent readout differences. Its spreads are empirical
-indicators, not certified physical errors. The [saved comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
-is retained unchanged. The separate $\epsilon=1$ nonlinear runs are
-**under-resolved, not used for claims**; they establish no trapped threshold.
+Three-resolution controls at $\epsilon=0.25$ preserve the nonspherical
+preparation and fixed proper endpoint with decreasing constraint and adjacent
+readout differences ([comparison record](../results/summaries/nsc-atlas-gh-comparison-v1.json)).
+Separate $\epsilon=1$ nonlinear runs are **under-resolved, not used for claims**
+and establish no trapped threshold.
 
 ### A.9. Matter-work ledgers
 
-The perturbative balance in `6561d8cf`, passive nonlinear ledger in
-`e6f34eb7`, and finite controls in `2ed1aea0` retain pressure, geometry,
-measure and boundary contributions rather than identifying energy loss
-with vacuum production. Their residuals remain numerical controls in
-the [coupled-response](../docs/nsc-atlas-parent-backreaction.md) and
-[GH](../docs/nsc-atlas-parent-gh.md) owners. The full `v0.26.0` technical
-atlas and all historical chapters are preserved in the
-[archived foundation volume](archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf)
-and in [`paper/technical-atlas-record.md`](technical-atlas-record.md).
+Perturbative balances, passive nonlinear ledgers and finite controls retain
+pressure, geometry, measure and boundary contributions rather than identifying
+energy loss with vacuum production, with residuals recorded in the
+[coupled-response](../docs/nsc-atlas-parent-backreaction.md) and
+[GH](../docs/nsc-atlas-parent-gh.md) owners.
+
+### A.10. Reproducibility and verification index
+
+All symbolic derivations, numerical solvers, and pre-registered evaluations in
+Sections 1--9 are executable in
+[`src/recursive_horizons/nsc_atlas_offset_generator.py`](../src/recursive_horizons/nsc_atlas_offset_generator.py)
+and authenticated against the repository records indexed below:
+
+| Manuscript section | Mathematical owner | Authenticated numerical dataset |
+| --- | --- | --- |
+| **Section 1** (Offset generator, metric completion, axioms **A0--A4**) | [Offset-generator proof](../docs/nsc-atlas-offset-generator.md) | [Offset-generator summary](../results/summaries/nsc-atlas-offset-generator-v1.json) |
+| **Sections 2--3** (Smooth `0` horizon, flux/area/handoff law) | [Parent circulation owner](../docs/nsc-atlas-parent-circulation.md) | [GH history summary](../results/summaries/nsc-atlas-gh-history-v1.json) |
+| **Sections 4--5** (Pre-registered test NSC-P006, receiver pressure, dust tail) | [Offset thermodynamics owner](../docs/nsc-atlas-offset-thermodynamics.md) | [Flow forecast](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json), [Flow evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json) |
+| **Section 6** (Finite-amplitude existence, Hebey--Vaugon bound) | [Finite-parent data owner](../docs/nsc-atlas-finite-parent-data.md) | [Finite-parent data summary](../results/summaries/nsc-atlas-finite-parent-data-v1.json) |
+| **Section 6.1** (Internal work, continuation, one-mode trapped neck, Dirac mixing) | [Valve formation owner](../docs/nsc-atlas-valve-formation.md) | [Parent release](../results/summaries/nsc-atlas-parent-release-v2.json), [Continuation](../results/summaries/nsc-atlas-parent-release-continuation-v1.json), [Surface check](../results/summaries/nsc-atlas-parent-release-surface-v1.json), [Valve neck](../results/summaries/nsc-atlas-valve-neck.json), [GH neck](../results/summaries/nsc-atlas-valve-neck-gh-v1.json), [Spherical ledger](../results/summaries/nsc-atlas-valve-spherical-v1.json), [Conformal continuation](../results/summaries/nsc-atlas-valve-conformal-v1.json), [Local restart](../results/summaries/nsc-atlas-valve-restart-v1.json), [Source gate](../results/summaries/nsc-atlas-valve-source-gate-v1.json), [Dirac modes](../results/summaries/nsc-atlas-valve-dirac-modes-v1.json), [Dirac onset](../results/summaries/nsc-atlas-valve-dirac-onset-v1.json), [Dirac source](../results/summaries/nsc-atlas-valve-dirac-source-v1.json) |
+| **Sections 9.1--9.3 & 9.7** (Theorems 1--3, budget cubic, Friedmann EoS, triad hard core, $3:1$ Virial split) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Non-local-to-local atlas summary](../results/summaries/nsc-nonlocal-to-local-atlas-v1.json) |
+| **Section 9.4** (Theorem 4, coupled parent/receiver, zero-radius opening, last-echo cutoff) | [Coupled continuation owner](../docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation) | [Finite parent/receiver summary](../results/summaries/nsc-finite-parent-receiver-v1.json) |
+| **Section 9.5** (Theorem 5, whole-exterior neck onset $p^3-3p-3=0$, multipole waveform) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Neck waveform summary](../results/summaries/nsc-neck-waveform-v1.json) |
+| **Section 9.6** (Theorem 6, 3-axis cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, $2\times 2$ kinetic handoff) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Inherited daughter summary](../results/summaries/nsc-inherited-daughter-v1.json) |

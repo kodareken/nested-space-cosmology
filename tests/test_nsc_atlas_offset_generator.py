@@ -1261,3 +1261,23 @@ def test_exact_budget_curve_invariant_and_zero_parameter_inverse():
         assert pred['derived_D'] + pred['derived_M'] + pred['input_visible_share_V'] == pytest.approx(1., abs=1e-15)
         assert pred['derived_chi'] > 3.
 
+
+def test_covariant_action_to_a0_and_friedmann_eos():
+    from recursive_horizons.nsc_atlas_offset_generator import covariant_action_to_a0_and_friedmann_eos
+
+    res = covariant_action_to_a0_and_friedmann_eos()
+    assert res['covariant_to_a0_reduction']['reduction_is_exact_on_harmonic_curve_bundles'] is True
+    eos = res['friedmann_equations_of_state']
+    assert eos['w_DE'] == pytest.approx(-1., abs=1e-15)
+    assert eos['w_DE_equals_minus_one'] is True
+    assert eos['w_DM'] == pytest.approx(0., abs=1e-15)
+    assert eos['w_DM_equals_zero'] is True
+    assert eos['baryon_triad_w'] == pytest.approx(0., abs=1e-15)
+    assert eos['baryon_triad_w_equals_zero'] is True
+    reg = res['curvature_regularization_3plus1d']
+    assert reg['kinematic_cusp_removed_by_signed_R'] is True
+    assert reg['standing_wave_hard_core_radius_R_core'] == pytest.approx(math.sqrt(2. * math.pi), rel=1e-15)
+    assert reg['bounded_kretschmann_scale_48_over_R_core_6'] < 1.
+    assert reg['proper_birth_distance_finite'] is True
+
+

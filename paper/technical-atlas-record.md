@@ -1,3 +1,54 @@
+## 4. Pre-registered test: does the flow select today's vacuum fraction?
+
+<!-- nsc-claim:flow-vacuum-identifiability -->
+[Forecast](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json)
+[Evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+[Thermodynamic proof](../docs/nsc-atlas-offset-thermodynamics.md)
+
+## 5. What continues across zero: pressure and the late tail
+
+<!-- nsc-claim:receiving-field-pressure -->
+[Evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+
+### 6.1 The unchanged parent drives its internal geometry
+
+<!-- nsc-claim:parent-driven-mechanical-transfer -->
+[Force decomposition](../results/summaries/nsc-atlas-parent-release-v2.json)
+[Derivation](../docs/nsc-atlas-valve-formation.md)
+
+<!-- nsc-claim:parent-driven-finite-volume -->
+[Release](../results/summaries/nsc-atlas-parent-release-v2.json)
+[Continuation](../results/summaries/nsc-atlas-parent-release-continuation-v1.json)
+[Surface](../results/summaries/nsc-atlas-parent-release-surface-v1.json)
+
+<!-- nsc-claim:one-mode-trapped-neck -->
+[Neck](../results/summaries/nsc-atlas-valve-neck.json)
+[GH neck](../results/summaries/nsc-atlas-valve-neck-gh-v1.json)
+[Spherical](../results/summaries/nsc-atlas-valve-spherical-v1.json)
+
+<!-- nsc-claim:one-mode-regional-ledger -->
+[Spherical](../results/summaries/nsc-atlas-valve-spherical-v1.json)
+[Formation owner](../docs/nsc-atlas-valve-formation.md)
+
+<!-- nsc-claim:same-state-conformal-continuation -->
+[Conformal continuation](../results/summaries/nsc-atlas-valve-conformal-v1.json)
+
+<!-- nsc-claim:receiver-state-source-link -->
+[Restart](../results/summaries/nsc-atlas-valve-restart-v1.json)
+[Source gate](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
+[Dirac modes](../results/summaries/nsc-atlas-valve-dirac-modes-v1.json)
+[Dirac onset](../results/summaries/nsc-atlas-valve-dirac-onset-v1.json)
+[Dirac source](../results/summaries/nsc-atlas-valve-dirac-source-v1.json)
+
+## 9. The Non-Local Multiverse to Local Observer Atlas (Axioms A0--A4)
+
+<!-- nsc-claim:nonlocal-to-local-atlas-readout -->
+[Offset generator owner](../docs/nsc-atlas-offset-generator.md)
+[Non-local to local atlas](../results/summaries/nsc-nonlocal-to-local-atlas-v1.json)
+[Finite parent receiver](../results/summaries/nsc-finite-parent-receiver-v1.json)
+[Neck waveform](../results/summaries/nsc-neck-waveform-v1.json)
+[Inherited daughter](../results/summaries/nsc-inherited-daughter-v1.json)
+
 ### A.10. Earlier full technical abstract
 
 NSC proposes a geometric account of the world seen from inside a region.
