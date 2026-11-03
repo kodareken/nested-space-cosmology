@@ -1967,6 +1967,34 @@ def exponential_wall_bypasses_and_triad_winner():
         nuclear_potential_shape_derived=True)
 
 
+def winding_two_neck_calculation():
+    """Compare relaxed two-centre equipotentials at fixed enclosing pressure."""
+    from scipy.integrate import quad
+
+    rows = []
+    for separation in (0., .25, .5, .75, .99, 1., 1.01, 1.5, 2., 4., 16., 64.):
+        # Separation is the focal half-distance divided by the reference radius.
+        lower = math.sqrt(1 - 1 / separation) if separation > 1 else 0.
+
+        def volume_integrand(direction):
+            boundary = (1 + math.hypot(1, 2 * separation * direction)) / 2
+            width = boundary - separation
+            return width * (separation**2 * (1 - direction**2)
+                            + separation * width + width**2 / 3)
+
+        volume_factor = 3 * quad(volume_integrand, lower, 1., epsabs=1e-13, epsrel=1e-13)[0]
+        scale_ratio = volume_factor**(-.25)
+        energy_ratio = volume_factor**.25
+        rows.append(dict(half_separation_over_scale=separation,
+                         volume_at_fixed_scale_over_initial=volume_factor,
+                         equilibrium_scale_over_initial=scale_ratio,
+                         neck_radius_over_initial=scale_ratio * math.sqrt(max(0., 1-separation**2)),
+                         equilibrium_energy_over_initial=energy_ratio,
+                         available_energy_fraction=1-energy_ratio))
+    return dict(path=rows, separated_limit_energy_ratio=1/math.sqrt(2),
+                separated_limit_available_fraction=1-1/math.sqrt(2))
+
+
 def vacuum_bubble_crystallization_and_mass_spectrum():
     """Evaluate pressurized medium vacuum bubbles, surrounding-flow energy, 180-deg annihilation, resonance attraction, discrete bursts, and untuned mass ratios from A0-A4.
 

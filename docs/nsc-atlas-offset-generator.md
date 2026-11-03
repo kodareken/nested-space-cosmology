@@ -1022,6 +1022,68 @@ provides a separate mathematical example of increasing local intensity
 with bounded total kinetic energy. The fragmentation law above follows
 directly from the atlas bubble functional.
 
+### A downhill winding-two neck and split
+
+Extend the bubble's exterior radial phase $n/r$ to two unit centers
+separated by $2c$. Use the cavity $\Phi\geq 2/R$ with
+$\Phi=1/|\mathbf{x}-c\mathbf{e}_z|+1/|\mathbf{x}+c\mathbf{e}_z|$.
+This specifies a candidate phase and shape family. The unit labels are
+carried as fluxes of the exterior phase gradient. For $c=0$ the boundary
+is the winding-two sphere. The dimensionless separation is $s=c/R$.
+The midplane neck has radius $R\sqrt{1-s^2}$ for $s<1$. The components
+touch at $s=1$ and separate for $s>1$. Each separated component encloses
+one center. The constant boundary phase keeps the exterior field
+compatible with both components.
+
+Green's identity on the exterior gives
+$\int |\nabla\Phi|^2\,d^3x=(2/R)(8\pi)$, since the total normal
+flux is $8\pi$ and the contribution at infinity vanishes. With the
+normalization $m_0/(4\pi)$ this is the original stretch cost $4m_0/R$.
+Only the cavity volume changes at fixed $R$.
+
+For the volume, use prolate coordinates $\xi=(d_1+d_2)/(2c)$ and
+$\eta=(d_1-d_2)/(2c)$, where $d_i$ are distances to the centers. The
+volume element is $c^3(\xi^2-\eta^2)d\xi\,d\eta\,d\varphi$.
+Writing $q=(1+\sqrt{1+4s^2\eta^2})/2$, the boundary is $s\xi=q$.
+Integration gives the volume factor relative to a sphere of radius $R$,
+
+$$
+v(s)=3\int_{\eta_0}^1
+\left(q^2-\frac23 q^3-s^3/3+s^3\eta^2\right)d\eta,
+$$
+
+where $\eta_0=0$ for $s\leq1$ and $\eta_0=\sqrt{1-1/s}$ otherwise.
+At $s=0$ use the continuous limit $v=1$. On the connected part the
+derivative of the last two terms integrates to zero. The first two have
+derivative $-2s^2\eta^2\partial_s q<0$ away from the axis of integration
+$\eta=0$. Thus volume decreases strictly before the pinch. After the
+pinch, translate coordinates with one center and consider its half-space.
+Increasing the separation lowers the other center's potential in the
+common half-space. In the newly added strip between the old and new
+midplanes, both axial distances are at least $R$ so that the potential
+cannot exceed $2/R$. The translated lobes therefore shrink as separation
+increases, converging to two spheres of radius $R/2$ and $v=1/4$.
+
+At fixed pressure, minimizing $4m_0/R+PV_0R^3v(s)$ over the overall
+scale gives $R^*(s)/R^*(0)=v(s)^{-1/4}$ and
+$E^*(s)/E^*(0)=v(s)^{1/4}$. This relaxed path is downhill throughout.
+At the pinch $v=.6331341144$ and $E^*/E^*(0)=.8920186380$, leaving
+10.7981% available. In the separated limit the available fraction is
+$1-1/\sqrt2$, and each daughter has radius $R^*(0)/\sqrt2$.
+Near the original sphere, $v(s)=1-3s^4/5+O(s^6)$, so the first energy
+decrease is quartic in separation. Pressure sets the scale and absolute
+budget. The downhill sign holds for every positive pressure in this
+family.
+
+Run `python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --neck-split-only`
+for the volume integral and budget along the path. The path gives the
+energy available to outgoing degrees of freedom as the shapes relax.
+A time evolution, outgoing spectrum and pressure-triggered onset remain
+to be derived. The phase and geometry in this split are symmetric under
+interchange of daughters. The damped-oscillation residue interpreted as
+missing antimatter is a separate NSC hypothesis. Its identification with
+a matter count needs a signed observable and a conversion law.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:
