@@ -1418,6 +1418,69 @@ $$
   directly reconciling early-universe CMB acoustic peaks with late-universe
   weak-lensing shear measurements ($S_8\in[0.76,0.79]$).
 
+**Proposition 9.7c (Closed Two-Generation Topology, Variable Spectral Boundaries, Optical Clock Regimes, Early Supermassive Black-Hole Anchors, and Pressure-Chamber Crystallization):**
+Combining the two-generation orientation restoration $\mathcal P^2=(-I_3)^2=+I_3$
+(Section 1.2), the moving spectral band $[\lambda_{\min}(\tau),\lambda_{\max}(\tau)]=e^{-\chi(\tau)}[\ell_{P,0},2R_0]$
+(**Axiom A3**), the intrinsic optical clock $ds=d\tau/\lambda(\tau)$ (Theorem 4),
+and the two-valve horizon load $E_{\mathrm{DM}}^\star(\chi)$ (Theorem 1 & Theorem 3)
+yields the complete thermodynamic lifecycle of a nested room:
+
+- **(1) Closed finite-step circulation without an infinite tower or sterile branches (early SMBH formation):**
+  Because two `0`-valve crossings restore the 3D orientation Jacobian
+  ($\det(\mathcal P^2)=(-1)\times(-1)=+1$) and the cubic budget identity
+  $9DVB=4(V+B/2)^3$ depends only on the immediate two-valve pressure balance
+  across `0`, the multiverse does not require an infinite open-ended tower of
+  rooms or an infinite future wait for black-hole evaporation: as few as two
+  coupled phases (`+ <-> -`) or the four-node vortex-diffusion ring (`O <-> o`,
+  **Axiom A4**) form a closed, lossless thermodynamic engine. Moreover, **no
+  room can ever form a sterile (childless) branch**: energy enters the birth `0`
+  valve not as a dilute gas, but as an already compressed coherent filament at
+  the parent's Planck ceiling. By Theorem 4 (area-conserving fission
+  $\sum_i 4\pi(R_{n_i}^\star)^2=4\pi(R_N^\star)^2$) and Theorem 6 (the 3-axis
+  harmonic cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$, $1\to 2\to 4\to 8\to\dots$),
+  the primary octant nodes of the opening cascade directly seed **early
+  supermassive black-hole (SMBH) throats** at high redshift ($z>10$) prior to
+  ordinary stellar collapse.
+- **(2) Variable Planck ceiling $\ell_P(\tau)$ and Absolute-Zero floor $\lambda_{\max}(\tau)=2R(\tau)$ across three optical-clock regimes:**
+  Although both spectral boundaries evolve dynamically across the room's
+  lifetime ($[\ell_P(\tau),2R(\tau)]=e^{-\chi(\tau)}[\ell_{P,0},2R_0]$), an
+  interior observer's condensed `(1,1,1)` atomic rulers scale with the same room
+  band ($R_b^\star(\tau)\propto(m_0/P(\tau))^{1/4}$) at invariant octave
+  capacity $\mathcal B=2R(\tau)/\ell_P(\tau)=\mathrm{const}$. The evolving
+  band is experienced through three distinct regimes of the intrinsic optical
+  clock $ds=d\tau/\lambda(\tau)$:
+  1. *Phase I — Inflationary birth clock from the Planck pen tip ($\tau\to 0^+$, $\lambda(\tau)\sim\ell_P$):*
+     As the 1D pen draws out the new child room from $\mathcal R(0)=\ell_P>0$
+     with $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$, the intrinsic
+     clock rate $ds/d\tau=1/\lambda(\tau)\to\infty$ races through the three
+     orthogonal cascade divisions ($\chi:0\to 1\to 2\to 3$), inflating a single
+     Planck-scale throat into a macroscopic 3D room.
+  2. *Phase II — Black-hole horizon anchors ("fingers gripping the ledge") and thermodynamic pressure-chamber crystallization ($\chi\approx\chi_{\mathrm{freeze}}=3$):*
+     Each black hole in the room acts as an internal `0`-valve anchor carrying
+     the two-sided boundary tension
+     $E_{\mathrm{DM}}^\star(\chi)=(\theta^\star)^{3/2}+2(1-\theta^\star)e^{-\chi}=23.81\text{--}23.88$%
+     (Theorem 1) and the $75$% exterior Virial flow halo
+     $M_{\mathrm{eff}}=\frac{3}{2}M_{\mathrm{cav}}$ (Theorem 3). Like successive
+     fingers gripping a ledge to hold back runaway expansion, these `0`-valve
+     anchors arrest the initial expansion onto the Goldilocks pressure plateau
+     $\lambda_{\mathrm{child}}(\tau)\to\lambda_{\mathrm{Goldilocks}}=(E_{\mathrm{total}}/(3PV_0))^{1/4}$
+     (Theorem 3(3)). Inside this stabilized thermodynamic pressure chamber,
+     crossing $\chi_{\mathrm{freeze}}=3$ triggers a phase transition analogous
+     to water crystallizing into ice under pressure: 1D phase waves crystallize
+     into localized `(1,1,1)` baryon triads ($\Omega_b=e^{-3}=4.9787$%,
+     $R_n^\star=(m_0 n^2/(3PV_0))^{1/4}$), which bind via shared surrounding
+     flow ($-2m_0/d$) and resist merger via the hard-core barrier
+     ($\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)\approx +3.3137$) to form stable
+     atoms, stars, and solid planets.
+  3. *Phase III — Deflationary clock acceleration back into `0` ($\lambda_\perp=e^{-\chi}\to 0$ at $\ell_P$):*
+     When a star or region is compressed past the room's Planck-facet ceiling
+     ($\sqrt{R_\star\ell_P}=\lambda_n$, $M>M_{\mathrm{TOV}}\in[2.0414,2.1454]\ M_\odot$,
+     Proposition 9.2b), transverse scale deflation $\lambda_\perp=e^{-\chi}\to 0$
+     drives the local frequency $\omega\propto e^{+\chi}$ and optical clock rate
+     $ds/d\tau=1/\lambda_\perp$ back into rapid acceleration through the `0`
+     horizon valve, immediately becoming Phase I (inflationary birth) of the
+     next child room.
+
 ### 9.8 Harmonic asymmetry ladder, non-local-to-local observer dictionary, and strict quarantine of non-derived coincidences
 
 Evaluating the half-cycle spectral asymmetry
@@ -1457,6 +1520,7 @@ $7\times\chi_{\mathrm{freeze}}=21$):
 | Coupled finite-parent / receiver continuation & hybrid radial inertia $M(r)=1/(1+r^2/3)$ | Wave-driven child opening & last-echo horizon cutoff | Zero-radius opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$; last-echo cutoff $\tau_{\mathrm{echo}}=0.87596883$ ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63$%) |
 | Whole-exterior causal neck onset & harmonic trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ | Neck pinch waveform & 3-axis orthogonal cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$ | Characteristic cubic $p^3-3p-3=0$ ($p_+=\phi^{2/3}+\phi^{-2/3}\approx 2.1038034$); $1\to 2\to 4\to 8$ lobe cascade with exact ratios $-1/2$ and $-2$ and $B$-independent $\det M_{\mathrm{full}}=0.14003084>0$ |
 | Quantized cascade step $\Delta\chi_k=n_k=1$ ($\chi_{\mathrm{freeze}}=3$), WHIM split & sub-horizon growth | Cosmic freeze-out, $H_0=67.03\ \mathrm{km s^{-1}Mpc^{-1}}$ & $S_8\approx 0.776$ | $\chi_{\mathrm{freeze}}=\sum_{k=1}^3 n_k=3$, $(\Omega_{\mathrm{DE}},\Omega_{\mathrm{DM}},\Omega_{\mathrm{vis}})=(70.88,23.81,5.30)$%, $\Omega_b=e^{-3}=4.98$%, $\Delta\Omega_{\mathrm{WHIM}}=0.33$%, $d\Omega_{\mathrm{DE}}/d\Omega_{\mathrm{vis}}\approx -0.806$ (Theorem 7, Lemma 7.1, Proposition 9.7b) |
+| Variable band $[\ell_P(\tau),2R(\tau)]$, optical clock $ds=d\tau/\lambda(\tau)$ & `0`-valve anchors | Inflationary clock, early SMBHs, BH "ledge anchors" & matter crystallization | Invariant $\mathcal B=2R(\tau)/\ell_P(\tau)$; Phase I clock $ds/d\tau\to\infty$ at $\ell_P$; early $1\to 2\to 4\to 8$ SMBH throats; $E_{\mathrm{DM}}^\star=23.88$% BH anchors stabilize $\lambda_{\mathrm{Goldilocks}}$ for `(1,1,1)` crystallization at $\chi_{\mathrm{freeze}}=3$; Phase III deflation clock accelerates into next child room (Proposition 9.7c) |
 
 **Strict quarantine of candidate numerical coincidences not derived from `A0--A4`:**
 To maintain strict separation between proved geometric theorems and post-hoc
