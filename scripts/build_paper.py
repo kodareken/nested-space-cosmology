@@ -1474,7 +1474,7 @@ def build_pdf(
         toc,
         PageBreak(),
     ]
-    manuscript = source.read_text(encoding="utf-8")
+    manuscript = source.read_text(encoding="utf-8").split("<!-- nsc-pdf-end -->", 1)[0]
     story = cover_story + parse_markdown(manuscript)
     with deterministic_pdf_compression():
         document.multiBuild(story)

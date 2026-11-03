@@ -10,11 +10,14 @@ meanings to them.
 
 The active work is the geometric foundation. The previous action-based
 atlas remains a library of conditional constructions, not the foundation's
-assumptions. No new manuscript edition is being produced during this reset.
+assumptions. The Foundation Edition manuscript (`v0.27.0`) is rendered in
+[paper/nested-space-cosmology.pdf](paper/nested-space-cosmology.pdf) from
+[paper/nested-space-cosmology.md](paper/nested-space-cosmology.md).
 
 ## Active desk
 
 - [Foundation](THEORY.md): premises, interpretation and open connections.
+- [Main manuscript](paper/nested-space-cosmology.md) and [PDF](paper/nested-space-cosmology.pdf).
 - [Offset and winding construction](docs/nsc-atlas-offset-generator.md).
 - [Current result](docs/current-result.md).
 - [Code and verification](docs/active-code-map.md).
@@ -26,6 +29,10 @@ Run the focused checks and the complete non-local-to-local atlas readout with th
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_generator.py
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --atlas-only
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --evolution-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --last-echo-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --split-onset-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --split-waveform-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --cascade-inheritance-only
 ```
 
 The coupled reference evolves one inherited phase on deforming connected

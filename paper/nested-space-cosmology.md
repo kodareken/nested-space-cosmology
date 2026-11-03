@@ -28,31 +28,60 @@ bounded by its Planck cutoff ($\lambda_{\min}$) and Absolute-Zero horizon
 and inner black-hole `0` valves on a closed vortex--diffusion ring (`O <-> o`).
 
 Minimizing the unified 5-variable single-cost functional across `+`, `0`, and `-`
-yields a unique closed-form global minimum (Section 9). Without fluid assumptions,
-the infalling `+` parcel shrinks in volume while spaghettifying into a 1D filament
-above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.346574$ ($\theta^*=1/2$),
-while the `-` region rounds into a 3D sphere satisfying the $3:1$ Virial partition
-$Q_{\mathrm{stretch},-}^*=3W_{\mathrm{ext},-}^*$. At the zero-parameter two-valve
-steady state where the active filament share equals the 3D volumetric floor
-$\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}\approx 4.9787\%$ ($\chi_*\approx 3.066968$),
-the non-local budget partitions into **$71.1441\%$ Dark Energy-like expansion
-stretch**, **$23.8772\%$ Dark Matter-like boundary/infall load** ($1-e^{-3}\approx 95.0213\%$
-combined dark sector), and **$4.9787\%$ Visible filaments** ($70.88\% / 23.81\% / 5.30\%$
-at integer $\chi=3$). Along the discrete 3D volumetric e-fold harmonic ladder
-$\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ anchored at the spaghettification onset
-$e^{-2\chi_{\mathrm{spaghetti}}}=1/2$, stage $K=7$ ($21$ e-folds) gives a local
-baryon asymmetry residual **$\eta_7=5.955329\times 10^{-10}$**, inside the
-observed BBN window $[5.8,6.5]\times 10^{-10}$.
+yields a unique closed-form global minimum (Section 9) and six parameter-free
+geometric and dynamical theorems:
+(1) eliminating both internal variables $(\theta^*,\chi)$ from the five-variable
+budget shares $(D,M,V)$ with $B=M-D/3$ yields the exact zero-parameter algebraic
+curve $9DVB=4(V+B/2)^3$, inverse recovery $\theta^*=1/(1+2V/B)$ and
+$e^{2\chi}=\frac{2V+B}{B}\sqrt{\frac{2V+B}{3DV}}$, and the deep-nest invariant
+$\lim_{\chi\to\infty}B/V^2=16/27$;
+(2) without fluid assumptions, the infalling `+` parcel shrinks in volume while
+spaghettifying into a 1D filament above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.346574$
+($\theta^*=1/2$), while three independent geometric mechanisms ($d\lambda/\lambda$
+scale-invariant measure, active-tube concentration $w_{\mathrm{tube}}=1$, and
+zero-mode topological phase $\Delta\theta/\pi=1/2$) bypass the $e^{-3K}$
+volumetric dilution wall with $O(1)$ survival, and 3D standing-wave closure
+selects the `(1,1,1)` triad ground state ($E_{1,1,1}=3\pi^2/R^2$, $2:1$ split
+against the $S^2$ angular floor) with a finite wave-compression hard core
+$R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$;
+(3) for any incompressible irrotational potential flow around a spherical throat
+of radius $R(\tau)$ with volume flux $Q=4\pi R^2\dot{R}$, the exterior kinetic
+energy $T_{\mathrm{ext}}=2\pi\rho_0 R^3\dot{R}^2$ and surrounding-flow Virial
+work $W_{\mathrm{flow}}=\int_{r>R}\mathbf{x}\cdot(-\nabla p)\,d^3x$ obey the exact
+parameter-free $3:1$ partition $T_{\mathrm{ext}}:W_{\mathrm{flow}}=3:1$;
+(4) coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$
+produces the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$
+with zero-radius continuum opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$,
+a hybrid last-echo horizon cutoff $\tau_{\mathrm{echo}}=0.87596883$
+($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63\%$),
+and self-consistent parent curvature backreaction ($8.98\%$ asymptotic shift);
+(5) integrating the outward causal stress balance over the entire exterior
+$r\in[R,\infty)$ of the exact harmonic two-center family gives the parameter-free
+algebraic neck-splitting onset cubic $p^3-3p-3=0$ ($p_{\mathrm{crit}}=1+2^{1/3}+2^{-1/3}\approx 2.52988065$,
+$(c/R)_{\mathrm{onset}}=0.56786589<(c/R)_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$),
+finite-time pinch crossing $\Delta\tau_{\mathrm{pinch}}=0.506704$, positive
+central observer pulse $\max\phi_C=+0.163689$, and exact analytical pole-sum tail
+$\phi_C(T)=-0.14192836/T^{\prime}+0.01750496/(T^{\prime})^2+O((T^{\prime})^{-3})$; and
+(6) harmonicity ($\Delta\Phi=0$) forces the directional enclosed-volume derivative
+trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ to vanish at
+every stage, driving a 3-axis orthogonal post-pinch cascade
+$\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ ($1\to 2\to 4\to 8$ lobes, exact
+harmonic ratios $-1/2$ and $-2$) coupled by the exact multipole identity
+$\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$ and a
+strictly positive-definite, $B$-independent $2\times 2$ quasistatic kinetic matrix
+($M_{12}=-0.0054817211\neq 0$, $\det M_{\mathrm{full}}=0.1400308435>0$, initial
+transverse conjugate momentum $p_2(0)=+0.05157014>0$). Secondary single-valve
+epoch and ladder ansätze ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}\approx 4.9787\%$
+giving $71.1441\% / 23.8772\% / 4.9787\%$, and $K=7$ giving $\eta_7=5.955329\times 10^{-10}$)
+are strictly quarantined in Section 9.6 from the parameter-free theorems above.
 
 Sections 2--8 preserve the conditional two-scalar Einstein apparatus and the
 pre-registered single-horizon flow test NSC-P006 ($88.4735067504\%$ scalar
 patch-energy crossing, normalized area growth $1.085638919782\,\epsilon^2$,
 short-leg transfer $2.219782587242\,\epsilon^2$, and one-mode neck-trapping
-threshold $\epsilon_{\mathrm{crit}}=0.8339066$), which proved that an isolated
-single-horizon scalar flux without the two-valve least-resistance closure leaves
-$\Omega_{\Lambda,0}$ and $\eta_B$ unselected. Section 9 presents the complete
-Axiom-to-Theorem Non-Local Atlas that closes those links, while Appendix A
-retains all earlier technical chapters and numerical records.
+threshold $\epsilon_{\mathrm{crit}}=0.8339066$), while Appendix A summarizes the
+nine preserved technical engines and links to the archived `v0.26.0` foundation
+record.
 
 ## 1. One spatial seed, offset history and a generated geometry
 
@@ -1090,8 +1119,11 @@ The perturbative balance in `6561d8cf`, passive nonlinear ledger in
 measure and boundary contributions rather than identifying energy loss
 with vacuum production. Their residuals remain numerical controls in
 the [coupled-response](../docs/nsc-atlas-parent-backreaction.md) and
-[GH](../docs/nsc-atlas-parent-gh.md) owners. All original numbers and
-limitations are preserved in the technical sections that follow.
+[GH](../docs/nsc-atlas-parent-gh.md) owners. The full `v0.26.0` technical
+atlas and all historical chapters are preserved in the [archived foundation volume](archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf)
+and in the repository Markdown source that follows.
+
+<!-- nsc-pdf-end -->
 
 ### A.10. Earlier full technical abstract
 
