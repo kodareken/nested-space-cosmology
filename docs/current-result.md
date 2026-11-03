@@ -1,5 +1,13 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The zero-radius calculation finds infinite kinetic distance under logarithmic
+inertia. A separate radial-displacement inertia admits an affine continuation
+of the same triangular winding with r=2.9718260669 τ²+O(τ⁴). At τ=0.1 the
+new arc carries energy 0.306711998348, with budget defect below 2e-13 on the
+fine seed comparison. The arc is admitted by the reduction and its spatial
+and causal completion remains open. See the zero-radius derivation in the
+[offset owner](nsc-atlas-offset-generator.md#zero-radius-formation-with-finite-radial-inertia).
+
 The active connection is **one inherited phase -> finite enclosing pressure ->
 compression and receiving energy -> geometric response**. The
 [coupled derivation](nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation)

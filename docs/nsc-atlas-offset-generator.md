@@ -213,6 +213,59 @@ completion, its late geometric curvature has Lambda_curvature=3*(2a)^2
 =8*pi^2 in these units. This is a conditional metric-curvature result,
 not an SI vacuum prediction or a derived Einstein source equation.
 
+### Zero-radius formation with finite radial inertia
+
+For the logarithmic inertia and conserved budget H, each |d log R/dτ|
+is at most sqrt(2H/3). Integrating bounds R below by its positive reference
+radius times exp(-sqrt(2H/3)*|Δτ|). A leaf at R=0 is therefore at infinite
+kinetic distance. An internal available volume can still vanish through
+cancellation between positive enclosing volumes. Finite phase energy then
+forces its end-to-end phase difference to vanish as O(V^(1/6)).
+
+Consider the kinetic metric induced by mean squared radial displacement of
+a spherical shell with normalized angular measure. This gives dR² and
+admits zero radius at finite distance. In this candidate reduction keep two
+affine parent segments of length y and one receiving segment of length r.
+Use the continuous phase values (0,M,Θ,0). The root starts with y=1,
+M=W=2π and zero velocities, preserving the triangular winding. The receiving
+arc starts with r=Θ=0. Its admission is a premise of this continuation.
+
+The kinetic and stretch terms are
+
+$$
+K=\frac{\dot y^2+\dot r^2}{2}
+ +\frac{y}{6}(2\dot M^2+\dot M\dot\Theta+\dot\Theta^2)
+ +\frac r6\dot\Theta^2,\qquad
+Q=\frac{M^2+(\Theta-M)^2}{2y}+\frac{\Theta^2}{2r}.
+$$
+
+The phase mass matrix at birth has entries (2/3, 1/6, 1/3) in its upper
+triangle. Eliminating the midpoint acceleration gives reduced mass
+s=7/24 and s Θ''(0)=3W/2-k for limiting traction k=Θ/r. The radial
+equation gives r''(0)=k²/2, hence k+s k³/2=3W/2. Its unique positive
+root is 3.4477970166. With a=k²/4=2.9718260669, the opening has
+r=aτ²+O(τ⁴), Θ=kaτ²+O(τ⁴) and receiving energy 4a²τ²+O(τ⁴).
+
+For local existence divide r, Θ, y−1 and M−W by τ², and the two radial
+velocities and two phase momenta by τ. The resulting system τX'=F(τ,X)
+is analytic near the positive limiting coefficient a. At the limiting
+state the variations w=δ(Θ/τ²)−k δ(r/τ²) and b=δ(Θ'/τ)−k δ(r'/τ)
+satisfy w'=b−2w and b'=−b−(1/s+k²)w/a in logarithmic offset. The other
+linear blocks have eigenvalues −1 and −2. All eigenvalues have negative
+real part. Writing A=F_X at the limit, the integral operator for the
+deviation is ∫₀¹ u^(−A) [F(uτ,X(uτ))−A(X(uτ)−X₀)] du/u. Its kernel is integrable
+and its nonlinear part has arbitrarily small Lipschitz constant near the
+limit. Contraction gives the local branch in the bounded rescaled class.
+The forcing starts at order τ², giving the stated remainder.
+
+Run `python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --birth-only`.
+At offset 0.1 the radius is 0.028963565226, volume 2.429719051e-5 and
+received energy 0.306711998348. Seeds 1e-5 and 1e-6 differ in radius by
+4.5e-15 and the largest fine budget defect is 1.92e-13. These are numerical
+checks of the affine continuation. The causal and spatial completion remains
+open. If r is used as an isotropic volume radius, energy per volume grows
+as τ⁻⁴ at birth even though energy per arc length stays finite.
+
 ### Scope and the next connection
 
 The small [calculation record](../results/summaries/nsc-finite-parent-receiver-v1.json)

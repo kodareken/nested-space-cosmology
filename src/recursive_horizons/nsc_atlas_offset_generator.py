@@ -937,6 +937,66 @@ def parent_receiver_calculation():
         no_files_written=True)
 
 
+def affine_receiving_birth(duration=.1, seed=1e-5):
+    """Continue the triangular winding into a new affine arc at zero radius."""
+    from scipy.integrate import solve_ivp
+    from scipy.optimize import brentq
+
+    if not 0 < seed < duration <= .2:
+        raise ValueError('require 0 < seed < duration <= .2')
+    winding = 2 * math.pi
+    reduced_mass = 7 / 24
+    gradient = brentq(lambda k: k + reduced_mass * k**3 / 2 - 1.5 * winding,
+                      0., 1.5 * winding)
+    radius_coefficient = gradient**2 / 4
+    phase_acceleration = gradient**3 / 2
+    midpoint_acceleration = -3 * winding - phase_acceleration / 4
+    limit = [radius_coefficient, 2 * radius_coefficient,
+             gradient * radius_coefficient, winding**2 / 2, winding**2,
+             midpoint_acceleration / 2, -2 * winding, winding - gradient]
+
+    def unpack(offset, state):
+        u, p, v, parent_size, parent_speed, midpoint, pm, pc = state
+        radius = offset**2 * u
+        parent = 1 + offset**2 * parent_size
+        phase = offset**2 * v
+        middle = winding + offset**2 * midpoint
+        mass = np.array([[2 * parent / 3, parent / 6],
+                         [parent / 6, (parent + radius) / 3]])
+        velocities = np.linalg.solve(mass, [pm, pc])
+        return radius, parent, phase, middle, velocities
+
+    def rhs(log_offset, state):
+        offset = math.exp(log_offset)
+        u, p, v, parent_size, parent_speed, midpoint, pm, pc = state
+        _, parent, phase, middle, (md, td) = unpack(offset, state)
+        return [p - 2 * u, (v / u)**2 / 2 + offset**2 * td**2 / 6 - p,
+                td - 2 * v, parent_speed - 2 * parent_size,
+                (middle**2 + (phase - middle)**2) / (2 * parent**2)
+                + offset**2 * (2 * md**2 + md * td + td**2) / 6 - parent_speed,
+                md - 2 * midpoint, (phase - 2 * middle) / parent - pm,
+                (middle - phase) / parent - v / u - pc]
+
+    solution = solve_ivp(rhs, (math.log(seed), math.log(duration)), limit,
+                         method='DOP853', rtol=2e-12, atol=2e-13)
+    if not solution.success:
+        raise RuntimeError(solution.message)
+    defects = []
+    for log_offset, state in zip(solution.t, solution.y.T):
+        offset = math.exp(log_offset)
+        radius, parent, phase, middle, (md, td) = unpack(offset, state)
+        child = (offset * state[1])**2 / 2 + radius * (offset * td)**2 / 6 + phase**2 / (2 * radius)
+        outer = ((offset * state[4])**2 / 2
+                 + parent * offset**2 * (2 * md**2 + md * td + td**2) / 6
+                 + (middle**2 + (phase - middle)**2) / (2 * parent))
+        defects.append(abs(child + outer - winding**2))
+    return dict(offset=duration, seed=seed, radius=radius, volume=radius**3,
+                shared_phase=phase, child_energy=child, parent_energy=outer,
+                initial_energy=winding**2, max_budget_defect=max(defects),
+                birth_gradient=gradient, radius_coefficient=radius_coefficient,
+                child_energy_coefficient=4 * radius_coefficient**2)
+
+
 def one_room_geometric_continuation(offset):
     """Exact free-parent limit, including its finite optical future.
 

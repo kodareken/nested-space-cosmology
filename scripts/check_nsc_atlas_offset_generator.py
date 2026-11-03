@@ -5,7 +5,7 @@ from recursive_horizons.nsc_atlas_offset_generator import (
     calculation,winding_calculation,winding_transport_calculation,
     offset_connection_calculation,inherited_offset_calculation,
     intrinsic_compression_calculation,buckling_to_goldilocks_calculation,
-    nonlocal_to_local_atlas_readout,parent_receiver_calculation)
+    nonlocal_to_local_atlas_readout,parent_receiver_calculation,affine_receiving_birth)
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -20,7 +20,12 @@ def main():
     group.add_argument('--buckling-only',action='store_true',help='helical buckling, damped +/0/- wave asymmetry and Goldilocks equilibrium to stdout')
     group.add_argument('--atlas-only',action='store_true',help='non-local to local multiverse atlas fixed point and translation dictionary to stdout')
     group.add_argument('--evolution-only',action='store_true',help='finite parent/receiver phase and geometry, with eight parallel controls; stdout only')
+    group.add_argument('--birth-only',action='store_true',help='zero-radius affine continuation and seed comparison')
     args=p.parse_args()
+    if args.birth_only:
+        if args.output is not None:p.error('birth calculations write to stdout; omit --output')
+        print(json.dumps([affine_receiving_birth(seed=seed) for seed in (1e-4,1e-5,1e-6)],indent=2))
+        return
     for selected,run in ((args.winding_only,winding_calculation),
                          (args.transport_only,winding_transport_calculation),
                          (args.connection_only,offset_connection_calculation),
