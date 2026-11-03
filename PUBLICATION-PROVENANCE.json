@@ -2891,9 +2891,9 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 50646,
+      "bytes": 5068,
       "path": "paper/build-manifest.json",
-      "sha256": "d08792044ded56750934ca6e6dfdbe68006799bf5e9a20b86e9afbcb6ca4b27a"
+      "sha256": "e91343f317f082e253105862e4b0b8f48b39ab18cf6dfcfb77a9d1d462a8d851"
     },
     {
       "bytes": 3215,
@@ -3226,14 +3226,19 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 767566,
+      "bytes": 57700,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "ce11d4b5da5b1b59b16824c711fcd7aa763a279aca708bd61faee8cb763940f7"
+      "sha256": "ec381891ac8001341f031f84a6d5dc383749528ab9776ec9c97df2c68ab55f5b"
     },
     {
-      "bytes": 1747921,
+      "bytes": 1786899,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "8c9c23e4723e0f1d2fce16e66f7a64a172f496a0307e85a241e719576656a7a9"
+      "sha256": "d706c495c31e7f3eb8f230e8dfc1694470eb4349e49581254125131eab5beb7f"
+    },
+    {
+      "bytes": 703560,
+      "path": "paper/technical-atlas-record.md",
+      "sha256": "99e3ad3c274ba81002d0f880751afee8dc88f6d69377223664a497ca2883d2dc"
     },
     {
       "bytes": 1521,
@@ -16496,9 +16501,9 @@
       "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
     },
     {
-      "bytes": 5242,
+      "bytes": 5805,
       "path": "scripts/build_nsc_atlas_source_map.py",
-      "sha256": "5ec61e40e7d62729f77bbbfa75340bfcae920961b1a0f9bb70cf5c5a05ca7ada"
+      "sha256": "2748d0ccc2720f384a85b0ff98906f477a4d89349fb1eb1c1bbef0bbd4d0e28b"
     },
     {
       "bytes": 69904,
@@ -16516,9 +16521,9 @@
       "sha256": "1e2f5f6ad001cc699dd112084fc3530140639e6e92e243c93281919300cf125f"
     },
     {
-      "bytes": 9132,
+      "bytes": 9346,
       "path": "scripts/check_claim_bindings.py",
-      "sha256": "426625b832a48fdc791579b86598eba280f73cfcf6820882c8894d7e28851ff2"
+      "sha256": "0eecfc74ed65283690851f5ebeea9d5782ef941498a6e7a97d68ba6e6ce0bd19"
     },
     {
       "bytes": 899,
@@ -17326,9 +17331,9 @@
       "sha256": "d1127e0d1ef435ee5525b953f00f72eee0d676536a90f6f33658a0fccb66917a"
     },
     {
-      "bytes": 57049,
+      "bytes": 57196,
       "path": "scripts/check_publication.py",
-      "sha256": "c4e4e234d0173142ccb5c08df87bbb9b6c35f23d172cf583cb4a0df2dd0b7863"
+      "sha256": "93bda1f7c2b142bc16cc35a656cab72cb9d6c55b0276c6a6cd5512b42eff5660"
     },
     {
       "bytes": 4326,
