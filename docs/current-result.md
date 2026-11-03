@@ -1,5 +1,17 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The neck split now evolves with inertia from the same exterior phase and
+an exact outgoing multipole response. The reference deformed seed s=.05
+reaches the pinch at offset3.960294 and two separated lobes at4.264066.
+A finite radius10 receiver records the outgoing pulse. Its polar phase
+departure is .0506724 and equatorial departure −.0171683. The integrated
+outward energy is .0553464, with matching-radius controls .0314597–.0717211
+showing the remaining near-field approximation dependence. The signed
+full-sphere phase integral is zero for this symmetric preparation.
+That angular average leaves the earlier temporal lobe-residue calculation
+as its separately defined observable.
+See [the coupled split and waveform](nsc-atlas-offset-generator.md#the-split-launches-its-own-phase-waveform).
+
 The existing damped oscillator already gives the signed lobe-area residue
 and the K=7 example. Its same energy ledger gives a separate work residue
 η_work=2η_area/(1+η_area²). At K=7 the area and work values are

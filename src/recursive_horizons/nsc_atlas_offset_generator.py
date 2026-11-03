@@ -1972,6 +1972,234 @@ def exponential_wall_bypasses_and_triad_winner():
         nuclear_potential_shape_derived=True)
 
 
+def _neck_volume_factor(separation, order=64):
+    nodes, weights = np.polynomial.legendre.leggauss(order)
+    lower = math.sqrt(1 - 1 / separation) if separation > 1 else 0.
+    direction = lower + (nodes + 1) * (1 - lower) / 2
+    boundary = (1 + np.sqrt(1 + 4 * separation**2 * direction**2)) / 2
+    width = boundary - separation
+    integral = width * (separation**2 * (1-direction**2)
+                        + separation * width + width**2/3)
+    return float(3 * np.dot(weights, integral) * (1-lower)/2)
+
+
+def split_waveform_evolution(matching_radius=2.5, maximum_mode=6,
+                             shape_samples=161, quadrature_order=48):
+    """Collective neck coordinate coupled to the same field's outgoing exterior.
+
+    The interior follows the established equipotential path. Its inertia is
+    the phase L2 kinetic integral. Exterior even Legendre modes propagate
+    causally with exact rational outgoing boundary response. Units set the
+    original equilibrium radius and phase propagation speed to one.
+    """
+    from scipy.integrate import solve_ivp
+    from scipy.interpolate import CubicSpline
+
+    if not 2.3 <= matching_radius <= 4 or maximum_mode not in (2,4,6,8):
+        raise ValueError('matching radius in [2.3,4] and even maximum mode 2..8 required')
+    if shape_samples < 65 or quadrature_order < 24:
+        raise ValueError('at least 65 shape samples and quadrature order 24 required')
+    sphere = matching_radius
+    separations = np.unique(np.r_[np.linspace(0,1,shape_samples),
+                                 np.linspace(1,1.25,max(17,shape_samples//4))])
+    coordinates, energies, inertias = [], [], []
+    nodes, weights = np.polynomial.legendre.leggauss(quadrature_order)
+    modes = tuple(range(2,maximum_mode+1,2))
+    for separation in separations:
+        volume = _neck_volume_factor(float(separation),quadrature_order)
+        scale = volume**(-.25)
+        center = separation * scale
+        coordinate = center**2
+        inertia = 0.
+        cut = math.sqrt(1-1/separation) if separation > 1 else 0.
+        for low, high in ((0.,cut),(cut,1.)):
+            if high == low:continue
+            eta = low + (nodes+1)*(high-low)/2
+            bottom = np.maximum(center, scale*(1+np.sqrt(1+4*separation**2*eta**2))/2)
+            top = np.sqrt(sphere**2+center**2*(1-eta**2))
+            radial = bottom[:,None]+(nodes[None,:]+1)*(top-bottom)[:,None]/2
+            denominator = radial**2-center**2*eta[:,None]**2
+            phase_derivative = radial*(radial**2*(3*eta[:,None]**2-1)
+                                      +center**2*(eta[:,None]**4-3*eta[:,None]**2))/denominator**3
+            inertia += float(np.dot(weights, (denominator*phase_derivative**2)@weights
+                                     *(top-bottom)/2)*(high-low))
+        # Untransported higher harmonics retain their quasistatic inertia.
+        for degree in range(maximum_mode+2,42,2):
+            boundary_derivative = degree * coordinate**(degree//2-1)/sphere**(degree+1)
+            inertia += 2*sphere**3*boundary_derivative**2/((2*degree+1)*(2*degree-1))
+        coordinates.append(coordinate);energies.append(16/3*volume**.25);inertias.append(inertia)
+    potential = CubicSpline(coordinates,energies)
+    mass = CubicSpline(coordinates,inertias)
+    inverse_shape = CubicSpline(coordinates,separations)
+    pole_data=[];total_poles=0
+    for degree in modes:
+        polynomial=np.array([math.factorial(degree+k)/(math.factorial(k)*math.factorial(degree-k)*2**k)
+                             for k in range(degree+1)])
+        roots=np.roots(polynomial)
+        residues=roots**degree/np.polyval(np.polyder(polynomial),roots)
+        pole_data.append((degree,roots,residues,slice(total_poles,total_poles+degree),polynomial))
+        total_poles+=degree
+
+    def boundary(coordinate, degree):
+        value=2*coordinate**(degree//2)/sphere**(degree+1)
+        derivative=degree*coordinate**(degree//2-1)/sphere**(degree+1)
+        return value,derivative
+
+    seed=.05
+    coordinate0=seed**2*_neck_volume_factor(seed,quadrature_order)**(-.5)
+    histories=np.zeros(total_poles,dtype=complex)
+    for degree,roots,_,indices,_ in pole_data:
+        histories[indices]=-sphere/roots*boundary(coordinate0,degree)[0]
+    initial=np.r_[coordinate0+0j,0j,histories,np.zeros(len(modes)+1,dtype=complex)]
+    potential0=float(potential(coordinate0))
+
+    def rhs(_, state):
+        coordinate=float(state[0].real);velocity=float(state[1].real)
+        poles=state[2:2+total_poles];derivative=np.zeros_like(state)
+        reaction=0.;exterior_work=0.
+        for index,(degree,roots,residues,indices,_) in enumerate(pole_data):
+            value,gradient=boundary(coordinate,degree)
+            rate=gradient*velocity
+            h=poles[indices];hdot=roots/sphere*h+value
+            outgoing=rate+value/sphere-float(np.sum(roots*h/sphere**2).real)
+            coefficient=2*sphere**2/(2*degree+1)
+            reaction+=coefficient*gradient*(outgoing-(degree+1)*value/sphere)
+            exterior_work+=coefficient*outgoing*rate
+            radiation_rate=sphere*rate+float(np.dot(residues,hdot).real)
+            derivative[2+indices.start:2+indices.stop]=hdot
+            derivative[2+total_poles+index]=2*radiation_rate**2/(2*degree+1)
+        derivative[0]=velocity
+        derivative[1]=(-float(potential(coordinate,1))-.5*float(mass(coordinate,1))*velocity**2-reaction)/float(mass(coordinate))
+        derivative[-1]=exterior_work
+        return derivative
+
+    final_coordinate=1.2**2*_neck_volume_factor(1.2,quadrature_order)**(-.5)
+    def finished(_, state):return float(state[0].real)-final_coordinate
+    finished.terminal=True;finished.direction=1
+    solution=solve_ivp(rhs,(0.,30.),initial,method='DOP853',rtol=2e-10,atol=2e-12,
+                       dense_output=True,events=finished,max_step=.025)
+    if not solution.success or not solution.t_events[0].size:
+        raise RuntimeError('neck split did not reach the declared separated endpoint')
+
+    def readout(time):
+        state=solution.sol(time);coordinate=float(state[0].real);velocity=float(state[1].real)
+        field=[];radiation=[];static=0.
+        for index,(degree,roots,residues,indices,_) in enumerate(pole_data):
+            value,gradient=boundary(coordinate,degree)
+            h=state[2+indices.start:2+indices.stop]
+            hdot=roots/sphere*h+value
+            field.append(float((sphere*value+np.dot(residues,h)).real))
+            radiation.append(float((sphere*gradient*velocity+np.dot(residues,hdot)).real))
+            static+=sphere*(degree+1)/(2*degree+1)*value**2
+        energy_static0=sum(sphere*(degree+1)/(2*degree+1)*boundary(coordinate0,degree)[0]**2 for degree in modes)
+        kinetic=float(mass(coordinate))*velocity**2/2
+        total=float(potential(coordinate))+kinetic-static+energy_static0+float(state[-1].real)
+        return dict(time=float(time),separation=float(inverse_shape(coordinate)),
+                    coordinate=coordinate,velocity=velocity,kinetic=kinetic,
+                    potential=float(potential(coordinate)),budget_residual=total-potential0,
+                    outgoing_phase_coefficients=field,outgoing_rate_coefficients=radiation,
+                    cumulative_radiated_energy=state[2+total_poles:2+total_poles+len(modes)].real.tolist())
+
+    from scipy.optimize import brentq
+    end=float(solution.t[-1]);pinch_coordinate=_neck_volume_factor(1.,quadrature_order)**(-.5)
+    pinch=brentq(lambda t: float(solution.sol(t)[0].real)-pinch_coordinate,0.,end)
+    def linear_response(rate):
+        z=rate*sphere
+        normal_response=(z**3+4*z*z+9*z+9)/(sphere*(z*z+3*z+3))
+        return (float(mass(0.))*rate**2-8/5
+                +8/(5*sphere**4)*(normal_response-3/sphere))
+    growth_rate=brentq(linear_response,.1,4.)
+    rows=[readout(t) for t in np.linspace(0.,end,17)]
+    # Independent spatial field-energy integral on the final outgoing light cone.
+    radial_nodes,radial_weights=np.polynomial.legendre.leggauss(12)
+    widths=np.diff(solution.t)/2
+    retarded=((solution.t[1:]+solution.t[:-1])[:,None]/2
+              +widths[:,None]*radial_nodes).ravel()
+    radii=sphere+end-retarded
+    integration_weights=(widths[:,None]*radial_weights).ravel()
+    def exterior_field(degree,roots,indices,polynomial,radii,retarded):
+        history=solution.sol(retarded)
+        value,gradient=boundary(history[0].real,degree)
+        rate=gradient*history[1].real
+        h=history[2+indices.start:2+indices.stop]
+        hdot=roots[:,None]/sphere*h+value
+        polynomial_prime=np.polyder(polynomial)
+        denominators=np.polyval(polynomial_prime,roots)
+        arguments=roots[:,None]*radii[None,:]/sphere
+        coefficients=np.polyval(polynomial,arguments)/(sphere*denominators[:,None])
+        coefficient_derivatives=(roots[:,None]*np.polyval(polynomial_prime,arguments)
+                                 /(sphere**2*denominators[:,None]))
+        prefactor=(sphere/radii)**(degree+1)
+        leading=(radii/sphere)**degree
+        field=prefactor*(leading*value+np.sum(coefficients*h,axis=0).real)
+        field_time=prefactor*(leading*rate+np.sum(coefficients*hdot,axis=0).real)
+        field_radius=(-(degree+1)*field/radii-field_time
+                      +prefactor*(degree*leading*value/radii
+                                  +np.sum(coefficient_derivatives*h,axis=0).real))
+        return field,field_time,field_radius
+
+    exterior_energy=0.;exterior_initial=0.
+    detector_radius=10.
+    detector_offsets=np.linspace(0.,end,17)
+    detector_polar=np.zeros(17);detector_equatorial=np.zeros(17)
+    detector_energy=0.
+    for degree,roots,residues,indices,polynomial in pole_data:
+        field,field_time,field_radius=exterior_field(degree,roots,indices,polynomial,radii,retarded)
+        density=(radii**2*(field_time**2+field_radius**2)+degree*(degree+1)*field**2)/(2*degree+1)
+        exterior_energy+=float(np.dot(integration_weights,density))
+        value0=boundary(coordinate0,degree)[0]
+        exterior_initial+=sphere*(degree+1)/(2*degree+1)*value0**2
+        exterior_energy+=(degree+1)/(2*degree+1)*value0**2*sphere**(2*degree+2)/(sphere+end)**(2*degree+1)
+        receiver=np.full_like(retarded,detector_radius)
+        _,time_rate,radial_rate=exterior_field(degree,roots,indices,polynomial,receiver,retarded)
+        detector_energy+=float(np.dot(integration_weights,
+                                     -2*detector_radius**2*time_rate*radial_rate/(2*degree+1)))
+        detector_field=exterior_field(degree,roots,indices,polynomial,
+                                     np.full(17,detector_radius),detector_offsets)[0]
+        departure=detector_field-value0*(sphere/detector_radius)**(degree+1)
+        detector_polar+=departure
+        legendre=np.zeros(degree+1);legendre[-1]=1
+        detector_equatorial+=departure*np.polynomial.legendre.legval(0.,legendre)
+    exterior_work_energy=exterior_initial+float(solution.y[-1,-1].real)
+    return dict(initial_separation=seed,matching_radius=sphere,maximum_mode=maximum_mode,
+                shape_samples=shape_samples,quadrature_order=quadrature_order,
+                pinch=readout(pinch),endpoint=readout(end),waveform=rows,
+                maximum_budget_residual=max(abs(readout(t)['budget_residual']) for t in solution.t),
+                exterior_spatial_energy=exterior_energy,
+                exterior_work_energy=exterior_work_energy,
+                independent_exterior_energy_gap=exterior_energy-exterior_work_energy,
+                detector=dict(radius=detector_radius,
+                    arrival_offsets=(detector_offsets+detector_radius-sphere).tolist(),
+                    polar_phase_departure=detector_polar.tolist(),
+                    equatorial_phase_departure=detector_equatorial.tolist(),
+                    integrated_outward_energy=detector_energy,
+                    signed_full_sphere_phase_integral=0.),
+                initial_energy=potential0,modes=list(modes),
+                zero_shape_inertia=float(mass(0.)),linear_growth_rate=growth_rate)
+
+
+def split_waveform_calculation():
+    """Independent discretization and near-field approximation controls."""
+    from concurrent.futures import ProcessPoolExecutor
+
+    settings={
+        'coarse':dict(maximum_mode=4,shape_samples=81,quadrature_order=32),
+        'reference':dict(),
+        'shape_refined':dict(maximum_mode=6,shape_samples=321,quadrature_order=64),
+        'mode_refined':dict(maximum_mode=8,shape_samples=321,quadrature_order=64),
+        'near_field_smaller':dict(matching_radius=2.3,maximum_mode=8,shape_samples=321,quadrature_order=64),
+        'near_field_larger':dict(matching_radius=3.,maximum_mode=8,shape_samples=321,quadrature_order=64)}
+    with ProcessPoolExecutor(max_workers=6) as pool:
+        futures={name:pool.submit(split_waveform_evolution,**arguments) for name,arguments in settings.items()}
+        cases={name:future.result() for name,future in futures.items()}
+    return dict(schema='nsc-neck-waveform-v1',cases=cases,
+                assumptions=['relaxed two-center neck family in the inner region',
+                    'L2 kinetic term of the same exterior phase field',
+                    'static initial deformation s=.05 and zero velocity',
+                    'outgoing even multipoles beyond the matching sphere',
+                    'normalized m0=1 and pressure-volume coefficient 4/3'])
+
+
 def winding_two_neck_calculation():
     """Compare relaxed two-centre equipotentials at fixed enclosing pressure."""
     from scipy.integrate import quad

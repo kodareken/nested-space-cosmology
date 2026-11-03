@@ -1083,6 +1083,24 @@ def test_characteristic_fork_preserves_equal_receivers_and_contact_balance():
     assert result['rows'][-1]['regional_phase_energy'][1]>0
 
 
+def test_neck_motion_generates_causal_wave_with_independent_energy_balance():
+    from recursive_horizons.nsc_atlas_offset_generator import split_waveform_evolution
+
+    result = split_waveform_evolution()
+    radius = result['matching_radius']
+    assert result['zero_shape_inertia'] == pytest.approx(8/15*(1-radius**-3), rel=2e-12)
+    assert result['pinch']['time'] < result['endpoint']['time']
+    assert result['pinch']['coordinate'] > 0
+    assert result['endpoint']['separation'] == pytest.approx(1.2, abs=1e-8)
+    assert result['maximum_budget_residual'] < 1e-6
+    # Reconstructed fields integrated in space independently check boundary work.
+    assert abs(result['independent_exterior_energy_gap']) < 2e-8
+    assert result['detector']['integrated_outward_energy'] > 0
+    assert result['detector']['polar_phase_departure'][-1] > 0
+    assert result['detector']['equatorial_phase_departure'][-1] < 0
+    assert result['detector']['arrival_offsets'][0] == pytest.approx(10-radius)
+
+
 def test_hybrid_echo_cutoffs_and_late_redshift():
     from recursive_horizons.nsc_atlas_offset_generator import hybrid_receiving_echo
 

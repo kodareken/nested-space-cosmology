@@ -1116,6 +1116,101 @@ interchange of daughters. The damped-oscillation residue interpreted as
 missing antimatter is a separate NSC hypothesis. Its identification with
 a matter count needs a signed observable and a conversion law.
 
+### The split launches its own phase waveform
+
+The downhill neck path now has a coupled dynamical calculation. Use the
+same exterior phase action with kinetic and gradient terms
+$\int(\Phi_t^2-|\nabla\Phi|^2)d^3x/(4\pi)$, in units $m_0=1$ and
+initial sphere radius one. The existing pressure normalization is then
+$PV_0=4/3$. The near field follows the two-center equipotential family
+and its relaxed radius. This collective-coordinate reduction is a stated
+approximation. The outer field satisfies its wave equation with outgoing
+conditions and acts back on the changing shape.
+
+Use $q=c^2$ as the shape coordinate. The first phase departure about the
+sphere is $2qP_2(\cos\theta)/r^3$. Direct integration of its squared
+time derivative gives total quasistatic inertia $8/15$. The potential
+is $16/3-(4/5)q^2+O(q^3)$. Thus a small admitted deformation has an
+unstable direction with a definite restoring-force sign. The initial
+reference takes $s=c/R=.05$ and zero velocity. The initial outer field
+is the static field of that deformation. The seed is explicit preparation
+data and sets the timing of departure from the exact sphere.
+
+At a matching sphere $r=B$ the even angular coefficients are
+$g_l(q)=2q^{l/2}/B^{l+1}$. The total flux fixes a constant monopole,
+and reflection symmetry removes odd angular modes. The retained dynamical
+modes satisfy the radial wave equation outside B. For Laplace variable p,
+their exact normal response is
+
+$$
+D_l(p)=p+\frac{l+1}{B}
+-p\frac{P_l'(pB)}{P_l(pB)},\qquad
+P_l(z)=\sum_{k=0}^{l}\frac{(l+k)!}{k!(l-k)!2^k}z^{l-k}.
+$$
+
+Here P_l is the outgoing radial polynomial, distinct from the Legendre
+angular polynomial. If its roots are rho_j, states h_j satisfy
+$\dot h_j=(\rho_j/B)h_j+g_l$. The normal response is
+$D_lg_l=\dot g_l+g_l/B-\sum_j\rho_jh_j/B^2$.
+Initial h_j=−Bg_l(0)/rho_j recovers the prepared static exterior.
+This construction supplies causal memory and energy transfer without
+selecting a damping coefficient or a sinusoidal output.
+
+The projected near-field inertia M(q) is the integral of
+$(\partial_q\Phi)^2/(2\pi)$ over the near exterior. Untransported higher
+harmonics retain their quasistatic inertia. The retained exterior static
+energy is subtracted once from the full potential U(q). Variation gives
+
+$$
+M\ddot q+\tfrac12M'\dot q^2+U'
++\sum_l\frac{2B^2}{2l+1}g_l'
+\left[D_lg_l-\frac{l+1}{B}g_l\right]=0.
+$$
+
+The exterior work is $\sum_l 2B^2(D_lg_l)\dot g_l/(2l+1)$. Including
+that field energy closes the combined budget. Independently reconstructing
+the wave at finite radii and integrating its kinetic and gradient energies
+checks this account. The source of the phase pulse is the evolving shape.
+
+At the reference B=2.5, l<=8 calculation, the neck pinches at offset
+3.960294 and reaches the declared separated state s=1.2 at 4.264066.
+The potential falls from 5.333328 to 4.513152. The projected kinetic
+budget is .726247. A receiver at radius 10 records positive polar phase
+departure .0506724 and negative equatorial departure −.0171683 at the
+last arrival in this window. Its integrated outward energy is .0553464.
+All these quantities use the source's normalized length and offset units.
+The signed angular mean of the emitted departure is zero because every
+varying mode has positive angular degree. The two antipodal poles have
+equal signals by the source symmetry.
+This angular integral and the earlier temporal lobe-area residue use
+different readout operations. This calculation assigns no value to the
+missing-antimatter identification of that temporal residue.
+
+Six bounded controls compare shape quadrature, angular cutoffs and the
+size of the quasistatic near field. At fixed B=2.5 the last two shape
+discretizations change the l<=6 receiver energy by about 2.13e-8, while
+adding l=8 changes it by 5.99e-6. The independent exterior energy integral
+differs from boundary work by less than 8e-11 across the cases. Changing
+B from 2.3 to 3 changes receiver energy from .0717211 to .0314597.
+This latter variation measures dependence on the near-field reduction
+and dominates the numerical differences. It must accompany any quoted
+wave amplitude. A fully evolving near phase field remains to be calculated.
+
+The level set itself continues through the pinch with a smooth local
+phase normal form. Writing rho for cylindrical distance and z for axial
+distance, near the origin at s=1 its equation is
+$2z^2-\rho^2=2R^2(s-1)$ to leading order. Neck radius has a square-root
+coordinate behavior, while the underlying phase and its shape derivative
+remain finite. The q coordinate carries the evolution across that event.
+
+The [compact result](../results/summaries/nsc-neck-waveform-v1.json) and
+`python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --split-waveform-only`
+give the finite waveforms and all six controls. The calculation reaches
+two separated phase lobes. Relaxation to the infinitely separated energy
+limit, an inherited seed mechanism and a signed matter-count readout
+remain open. In the calculated finite window the pole records a pulse,
+and its opposite angular signs cancel in the full-sphere phase integral.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:

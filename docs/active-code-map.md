@@ -1,5 +1,12 @@
 # Active code map
 
+`split_waveform_evolution` couples the existing two-center neck family to
+its phase-field inertia and outgoing radial harmonics. The finite detector
+and independent spatial energy integral follow from the same solution.
+`--split-waveform-only` runs six quadrature, mode and near-field controls.
+Its [compact result](../results/summaries/nsc-neck-waveform-v1.json) retains
+the assumptions, finite waveform and approximation sensitivity.
+
 The active dynamical completion is `parent_receiver_characteristics`, in the
 existing offset module. It derives finite enclosing pressure and geometry
 work from the carried phase, with transparent contacts and retarded optical
