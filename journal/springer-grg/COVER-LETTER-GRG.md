@@ -3,7 +3,8 @@
 **Date:** 25 November 2026  
 **To:** The Editors, *General Relativity and Gravitation*  
 **Manuscript Title:** *Orientation-Reversing Regular Bounce Geometry, Open-Horizon Variational Budgets, and Three-Axis Harmonic Freeze-Out in Nested Spacetimes*  
-**Author:** Douglas Ek (`douglas@swedishsoftwareengineers.com`)  
+**Author:** Douglas Ek (`douglas@swedishsoftwareengineers.com`, ORCID: `0009-0003-2422-6098`)  
+**Affiliation:** Independent Researcher, Båstad, Sweden  
 **Article Type:** Research Article
 
 ---
@@ -44,5 +45,6 @@ This manuscript is original, is not under consideration by any other journal, an
 Sincerely,
 
 **Douglas Ek**  
-Independent Researcher, Sweden  
+Independent Researcher, Båstad, Sweden  
+ORCID: `https://orcid.org/0009-0003-2422-6098`  
 Email: `douglas@swedishsoftwareengineers.com`

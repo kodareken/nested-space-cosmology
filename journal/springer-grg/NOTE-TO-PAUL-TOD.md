@@ -17,4 +17,6 @@ I have attached the *GRG* PDF strictly for your information—please do not feel
 
 With warm regards and thanks again,
 
-Douglas Ek
+Douglas Ek  
+Båstad, Sweden  
+ORCID: https://orcid.org/0009-0003-2422-6098

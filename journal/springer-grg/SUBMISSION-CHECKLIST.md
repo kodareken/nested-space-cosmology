@@ -4,13 +4,12 @@ Everything is built, verified, and ready in `journal/springer-grg/`. Nothing has
 
 ---
 
-### Step 1 — Fill Your City (and Optional ORCID) in `sn-article.tex` (1 minute)
-1. Open `journal/springer-grg/sn-article.tex` at line 36:
-   ```latex
-   \affil*[1]{\orgname{Independent Researcher}, \orgaddress{\city{YOUR_CITY}, \country{Sweden}}}
-   ```
-   *(If you don't have a free ORCID yet, register in 60 seconds at `https://orcid.org/register` and add `\orcid{0000-...}` right after `\sur{Ek}` on line 34 — Springer journals strongly like seeing a verified ORCID for independent authors!)*
-2. Recompile `sn-article.pdf` if you edited line 34–36 (or ask me here and I will recompile it in 3 seconds).
+### Step 1 — Author Metadata Already Stamped & Verified
+- **Name:** Douglas Ek
+- **Affiliation:** Independent Researcher, Båstad, Sweden
+- **Email:** `douglas@swedishsoftwareengineers.com`
+- **ORCID:** `https://orcid.org/0009-0003-2422-6098` (`0009-0003-2422-6098`)
+- *(Tip: On your ORCID page `https://orcid.org/my-orcid`, click **Works -> Add -> Add DOI** and paste `10.5281/zenodo.23890258` with visibility set to **Everyone** so editors clicking your ORCID link see your archived monograph immediately.)*
 
 ---
 
@@ -28,7 +27,7 @@ Everything is built, verified, and ready in `journal/springer-grg/`. Nothing has
    - **Main Manuscript File:** `sn-article.tex`
    - **Support / Style / Bib Files:** `sn-jnl.cls`, `sn-mathphys-num.bst`, `sn-bibliography.bib` (and `sn-article.bbl` if requested)
    - **Figure Files:** `figures/fig1-bounce-and-geometry.pdf`, `figures/fig2-variational-budget-surface.pdf`, `figures/fig3-neck-cubic-and-cascade.pdf` *(600-DPI `.png` versions are also in `figures/` if the portal asks for raster previews)*
-   - **Cover Letter:** Paste or upload `COVER-LETTER-GRG.md` (with your city filled in).
+   - **Cover Letter:** Paste or upload `COVER-LETTER-GRG.md`.
 4. **Publishing Model Question (Important!):** When asked between Open Access (APC fee) vs. **Standard Subscription / Hybrid ($0 fee)**, select **Subscription ($0)** unless you specifically wish to pay for Open Access. Subscription articles in *GRG* receive a full Springer DOI (`10.1007/s10714-...`) and Springer's self-archiving policy explicitly allows posting the accepted author manuscript on **arXiv** immediately!
 
 ---
