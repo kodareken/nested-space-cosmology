@@ -1,0 +1,632 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{42}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Penrose}{1965}]{Penrose1965}
+\begin{barticle}
+\bauthor{\bsnm{Penrose}, \binits{R.}}:
+\batitle{Gravitational collapse and space-time singularities}.
+\bjtitle{Phys. Rev. Lett.}
+\bvolume{14},
+\bfpage{57}--\blpage{59}
+(\byear{1965})
+\doiurl{10.1103/PhysRevLett.14.57}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Hawking and
+  Penrose}{1970}]{HawkingPenrose1970}
+\begin{barticle}
+\bauthor{\bsnm{Hawking}, \binits{S.W.}},
+\bauthor{\bsnm{Penrose}, \binits{R.}}:
+\batitle{The singularities of gravitational collapse and cosmology}.
+\bjtitle{Proc. R. Soc. Lond. A}
+\bvolume{314},
+\bfpage{529}--\blpage{548}
+(\byear{1970})
+\doiurl{10.1098/rspa.1970.0021}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Goode and
+  Wainwright}{1985}]{GoodeWainwright1985}
+\begin{barticle}
+\bauthor{\bsnm{Goode}, \binits{S.W.}},
+\bauthor{\bsnm{Wainwright}, \binits{J.}}:
+\batitle{Isotropic singularities in cosmological models}.
+\bjtitle{Class. Quantum Grav.}
+\bvolume{2},
+\bfpage{99}--\blpage{115}
+(\byear{1985})
+\doiurl{10.1088/0264-9381/2/1/010}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Anguige and Tod}{1999}]{AnguigeTod1999}
+\begin{barticle}
+\bauthor{\bsnm{Anguige}, \binits{K.}},
+\bauthor{\bsnm{Tod}, \binits{K.P.}}:
+\batitle{Isotropic cosmological singularities: {I}. {P}olytropic perfect fluid
+  spacetimes}.
+\bjtitle{Ann. Phys. (N.Y.)}
+\bvolume{276},
+\bfpage{257}--\blpage{293}
+(\byear{1999})
+\doiurl{10.1006/aphy.1999.5946}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Tod}{2003}]{Tod2003}
+\begin{barticle}
+\bauthor{\bsnm{Tod}, \binits{K.P.}}:
+\batitle{Isotropic cosmological singularities: Other matter models}.
+\bjtitle{Class. Quantum Grav.}
+\bvolume{20},
+\bfpage{521}--\blpage{534}
+(\byear{2003})
+\doiurl{10.1088/0264-9381/20/3/309}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Penrose}{2010}]{Penrose2010}
+\begin{bbook}
+\bauthor{\bsnm{Penrose}, \binits{R.}}:
+\bbtitle{Cycles of Time: An Extraordinary New View of the Universe}.
+\bpublisher{Bodley Head},
+\blocation{London}
+(\byear{2010})
+\end{bbook}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Tod}{2015}]{Tod2015}
+\begin{barticle}
+\bauthor{\bsnm{Tod}, \binits{K.P.}}:
+\batitle{The equations of conformal cyclic cosmology}.
+\bjtitle{Gen. Relativ. Gravit.}
+\bvolume{47},
+\bfpage{17}
+(\byear{2015})
+\doiurl{10.1007/s10714-015-1859-7}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Gurzadyan and
+  Penrose}{2013}]{GurzadyanPenrose2013}
+\begin{barticle}
+\bauthor{\bsnm{Gurzadyan}, \binits{V.G.}},
+\bauthor{\bsnm{Penrose}, \binits{R.}}:
+\batitle{On {CCC}-predicted concentric low-variance circles in the {CMB} sky}.
+\bjtitle{Eur. Phys. J. Plus}
+\bvolume{128},
+\bfpage{22}
+(\byear{2013})
+\doiurl{10.1140/epjp/i2013-13022-4}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Einstein and Rosen}{1935}]{EinsteinRosen1935}
+\begin{barticle}
+\bauthor{\bsnm{Einstein}, \binits{A.}},
+\bauthor{\bsnm{Rosen}, \binits{N.}}:
+\batitle{The particle problem in the general theory of relativity}.
+\bjtitle{Phys. Rev.}
+\bvolume{48},
+\bfpage{73}--\blpage{77}
+(\byear{1935})
+\doiurl{10.1103/PhysRev.48.73}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Frolov
+  et~al.}{1990}]{FrolovMarkovMukhanov1990}
+\begin{barticle}
+\bauthor{\bsnm{Frolov}, \binits{V.P.}},
+\bauthor{\bsnm{Markov}, \binits{M.A.}},
+\bauthor{\bsnm{Mukhanov}, \binits{V.F.}}:
+\batitle{Black holes as possible sources of closed and semiclosed worlds}.
+\bjtitle{Phys. Rev. D}
+\bvolume{41},
+\bfpage{383}--\blpage{394}
+(\byear{1990})
+\doiurl{10.1103/PhysRevD.41.383}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Smolin}{1992}]{Smolin1992}
+\begin{barticle}
+\bauthor{\bsnm{Smolin}, \binits{L.}}:
+\batitle{Did the universe evolve?}
+\bjtitle{Class. Quantum Grav.}
+\bvolume{9},
+\bfpage{173}--\blpage{191}
+(\byear{1992})
+\doiurl{10.1088/0264-9381/9/1/016}
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Bronnikov et~al.}{2007}]{Bronnikov2007}
+\begin{barticle}
+\bauthor{\bsnm{Bronnikov}, \binits{K.A.}},
+\bauthor{\bsnm{Dehnen}, \binits{H.}},
+\bauthor{\bsnm{Melnikov}, \binits{V.N.}}:
+\batitle{Regular black holes and black universes}.
+\bjtitle{Gen. Relativ. Gravit.}
+\bvolume{39},
+\bfpage{973}--\blpage{987}
+(\byear{2007})
+\doiurl{10.1007/s10714-007-0430-6}
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Bronnikov and
+  Donskoy}{2010}]{BronnikovDonskoy2010}
+\begin{barticle}
+\bauthor{\bsnm{Bronnikov}, \binits{K.A.}},
+\bauthor{\bsnm{Donskoy}, \binits{E.V.}}:
+\batitle{Black universes with trapped ghosts}.
+\bjtitle{Gravit. Cosmol.}
+\bvolume{16},
+\bfpage{42}--\blpage{51}
+(\byear{2010})
+\doiurl{10.1134/S020228931001007X}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Pop{\l}awski}{2010}]{Poplawski2010}
+\begin{barticle}
+\bauthor{\bsnm{Pop{\l}awski}, \binits{N.J.}}:
+\batitle{Cosmology with torsion: {A}n alternative to cosmic inflation}.
+\bjtitle{Phys. Lett. B}
+\bvolume{694},
+\bfpage{181}--\blpage{185}
+(\byear{2010})
+\doiurl{10.1016/j.physletb.2010.09.056}
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Pop{\l}awski}{2012}]{Poplawski2012}
+\begin{barticle}
+\bauthor{\bsnm{Pop{\l}awski}, \binits{N.J.}}:
+\batitle{Nonsingular, big-bounce cosmology from spinor-torsion coupling}.
+\bjtitle{Phys. Rev. D}
+\bvolume{85},
+\bfpage{107502}
+(\byear{2012})
+\doiurl{10.1103/PhysRevD.85.107502}
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Morris and Thorne}{1988}]{MorrisThorne1988}
+\begin{barticle}
+\bauthor{\bsnm{Morris}, \binits{M.S.}},
+\bauthor{\bsnm{Thorne}, \binits{K.S.}}:
+\batitle{Wormholes in spacetime and their use for interstellar travel: {A} tool
+  for teaching general relativity}.
+\bjtitle{Am. J. Phys.}
+\bvolume{56},
+\bfpage{395}--\blpage{412}
+(\byear{1988})
+\doiurl{10.1119/1.15620}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Simpson and Visser}{2019}]{SimpsonVisser2019}
+\begin{barticle}
+\bauthor{\bsnm{Simpson}, \binits{A.}},
+\bauthor{\bsnm{Visser}, \binits{M.}}:
+\batitle{Black-bounce to traversable wormhole}.
+\bjtitle{J. Cosmol. Astropart. Phys.}
+\bvolume{2019}(\bissue{02}),
+\bfpage{042}
+(\byear{2019})
+\doiurl{10.1088/1475-7516/2019/02/042}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Carballo-Rubio
+  et~al.}{2020}]{CarballoRubio2020}
+\begin{barticle}
+\bauthor{\bsnm{Carballo-Rubio}, \binits{R.}},
+\bauthor{\bsnm{Di~Filippo}, \binits{F.}},
+\bauthor{\bsnm{Liberati}, \binits{S.}},
+\bauthor{\bsnm{Visser}, \binits{M.}}:
+\batitle{Geodesically complete black holes}.
+\bjtitle{Phys. Rev. D}
+\bvolume{101},
+\bfpage{084047}
+(\byear{2020})
+\doiurl{10.1103/PhysRevD.101.084047}
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Kossowski and
+  Kriele}{1993}]{KossowskiKriele1993}
+\begin{barticle}
+\bauthor{\bsnm{Kossowski}, \binits{M.}},
+\bauthor{\bsnm{Kriele}, \binits{M.}}:
+\batitle{Smooth and discontinuous signature type change in general relativity}.
+\bjtitle{Class. Quantum Grav.}
+\bvolume{10},
+\bfpage{2363}--\blpage{2371}
+(\byear{1993})
+\doiurl{10.1088/0264-9381/10/11/019}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Israel}{1966}]{Israel1966}
+\begin{barticle}
+\bauthor{\bsnm{Israel}, \binits{W.}}:
+\batitle{Singular hypersurfaces and thin shells in general relativity}.
+\bjtitle{Nuovo Cimento B}
+\bvolume{44},
+\bfpage{1}--\blpage{14}
+(\byear{1966})
+\doiurl{10.1007/BF02710419}
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Gibbons and
+  Hawking}{1977}]{GibbonsHawking1977}
+\begin{barticle}
+\bauthor{\bsnm{Gibbons}, \binits{G.W.}},
+\bauthor{\bsnm{Hawking}, \binits{S.W.}}:
+\batitle{Cosmological event horizons, thermodynamics, and particle creation}.
+\bjtitle{Phys. Rev. D}
+\bvolume{15},
+\bfpage{2738}--\blpage{2751}
+(\byear{1977})
+\doiurl{10.1103/PhysRevD.15.2738}
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Jacobson}{1995}]{Jacobson1995}
+\begin{barticle}
+\bauthor{\bsnm{Jacobson}, \binits{T.}}:
+\batitle{Thermodynamics of spacetime: {T}he {E}instein equation of state}.
+\bjtitle{Phys. Rev. Lett.}
+\bvolume{75},
+\bfpage{1260}--\blpage{1263}
+(\byear{1995})
+\doiurl{10.1103/PhysRevLett.75.1260}
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Prigogine et~al.}{1989}]{Prigogine1989}
+\begin{barticle}
+\bauthor{\bsnm{Prigogine}, \binits{I.}},
+\bauthor{\bsnm{Geheniau}, \binits{J.}},
+\bauthor{\bsnm{Gunzig}, \binits{E.}},
+\bauthor{\bsnm{Nardone}, \binits{P.}}:
+\batitle{Thermodynamics and cosmology}.
+\bjtitle{Gen. Relativ. Gravit.}
+\bvolume{21},
+\bfpage{767}--\blpage{776}
+(\byear{1989})
+\doiurl{10.1007/BF00758981}
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Lima}{1996}]{Lima1996}
+\begin{barticle}
+\bauthor{\bsnm{Lima}, \binits{J.A.S.}}:
+\batitle{Thermodynamics of decaying vacuum cosmologies}.
+\bjtitle{Phys. Rev. D}
+\bvolume{54},
+\bfpage{2571}--\blpage{2577}
+(\byear{1996})
+\doiurl{10.1103/PhysRevD.54.2571}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{{Planck Collaboration}
+  et~al.}{2020}]{Planck2018}
+\begin{barticle}
+\bauthor{\bsnm{{Planck Collaboration}}},
+\bauthor{\bsnm{Aghanim}, \binits{N.}}, \betal:
+\batitle{Planck 2018 results. {VI}. {C}osmological parameters}.
+\bjtitle{Astron. Astrophys.}
+\bvolume{641},
+\bfpage{6}
+(\byear{2020})
+\doiurl{10.1051/0004-6361/201833910}
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Madhavacheril et~al.}{2024}]{ACTDR6_2024}
+\begin{barticle}
+\bauthor{\bsnm{Madhavacheril}, \binits{M.S.}}, \betal:
+\batitle{The {A}tacama {C}osmology {T}elescope: {DR6} gravitational lensing map
+  and cosmological parameters}.
+\bjtitle{Astrophys. J.}
+\bvolume{962},
+\bfpage{113}
+(\byear{2024})
+\doiurl{10.3847/1538-4357/acff5f}
+\end{barticle}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{{DESI Collaboration} et~al.}{2025}]{DESI2024}
+\begin{barticle}
+\bauthor{\bsnm{{DESI Collaboration}}},
+\bauthor{\bsnm{Adame}, \binits{A.G.}}, \betal:
+\batitle{{DESI} 2024 {VI}: {C}osmological constraints from the measurements of
+  baryon acoustic oscillations}.
+\bjtitle{J. Cosmol. Astropart. Phys.}
+\bvolume{2025}(\bissue{02}),
+\bfpage{021}
+(\byear{2025})
+\doiurl{10.1088/1475-7516/2025/02/021}
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Weinberg}{1989}]{Weinberg1989}
+\begin{barticle}
+\bauthor{\bsnm{Weinberg}, \binits{S.}}:
+\batitle{The cosmological constant problem}.
+\bjtitle{Rev. Mod. Phys.}
+\bvolume{61},
+\bfpage{1}--\blpage{23}
+(\byear{1989})
+\doiurl{10.1103/RevModPhys.61.1}
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Asgari et~al.}{2021}]{KiDS1000_2021}
+\begin{barticle}
+\bauthor{\bsnm{Asgari}, \binits{M.}}, \betal:
+\batitle{{KiDS}-1000 cosmology: {C}osmic shear constraints and comparison
+  between two point statistics}.
+\bjtitle{Astron. Astrophys.}
+\bvolume{645},
+\bfpage{104}
+(\byear{2021})
+\doiurl{10.1051/0004-6361/202039070}
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Abbott et~al.}{2023}]{DESY3_KiDS_2023}
+\begin{barticle}
+\bauthor{\bsnm{Abbott}, \binits{T.M.C.}}, \betal:
+\batitle{{DES} {Y3} + {KiDS}-1000: {C}onsistent cosmology combining cosmic
+  shear surveys}.
+\bjtitle{Open J. Astrophys.}
+\bvolume{6},
+\bfpage{36}
+(\byear{2023})
+\doiurl{10.21105/astro.2305.17173}
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Weyl}{1916}]{Weyl1916}
+\begin{barticle}
+\bauthor{\bsnm{Weyl}, \binits{H.}}:
+\batitle{{\"U}ber die {G}leichverteilung von {Z}ahlen mod. {E}ins}.
+\bjtitle{Math. Ann.}
+\bvolume{77},
+\bfpage{313}--\blpage{352}
+(\byear{1916})
+\doiurl{10.1007/BF01475864}
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Ek}{2026}]{Ek2026Zenodo}
+\begin{botherref}
+\oauthor{\bsnm{Ek}, \binits{D.}}:
+Nested-Space Cosmology: {T}he Geometry of a Universe ({F}oundation {E}dition
+  v0.27.0, Software and Numerical Archive).
+Zenodo
+(2026).
+\doiurl{10.5281/zenodo.23890258}
+\end{botherref}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Lindblom et~al.}{2006}]{Lindblom2006}
+\begin{barticle}
+\bauthor{\bsnm{Lindblom}, \binits{L.}},
+\bauthor{\bsnm{Scheel}, \binits{M.A.}},
+\bauthor{\bsnm{Kidder}, \binits{L.E.}},
+\bauthor{\bsnm{Owen}, \binits{R.}},
+\bauthor{\bsnm{Rinne}, \binits{O.}}:
+\batitle{A new generalized harmonic evolution system}.
+\bjtitle{Class. Quantum Grav.}
+\bvolume{23},
+\bfpage{447}--\blpage{462}
+(\byear{2006})
+\doiurl{10.1088/0264-9381/23/16/S09}
+\end{barticle}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Hebey and Vaugon}{1993}]{HebeyVaugon1993}
+\begin{barticle}
+\bauthor{\bsnm{Hebey}, \binits{E.}},
+\bauthor{\bsnm{Vaugon}, \binits{M.}}:
+\batitle{Le probl{\`e}me de {Y}amabe {\'e}quivariant}.
+\bjtitle{Bull. Sci. Math.}
+\bvolume{117},
+\bfpage{241}--\blpage{286}
+(\byear{1993})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Goldberg}{1935}]{Goldberg1935}
+\begin{barticle}
+\bauthor{\bsnm{Goldberg}, \binits{M.}}:
+\batitle{The isoperimetric problem for polyhedra}.
+\bjtitle{Tohoku Math. J.}
+\bvolume{40},
+\bfpage{226}--\blpage{236}
+(\byear{1935})
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Chandrasekhar}{1931}]{Chandrasekhar1931}
+\begin{barticle}
+\bauthor{\bsnm{Chandrasekhar}, \binits{S.}}:
+\batitle{The maximum mass of ideal white dwarfs}.
+\bjtitle{Astrophys. J.}
+\bvolume{74},
+\bfpage{81}--\blpage{82}
+(\byear{1931})
+\doiurl{10.1086/143324}
+\end{barticle}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Oppenheimer and
+  Volkoff}{1939}]{OppenheimerVolkoff1939}
+\begin{barticle}
+\bauthor{\bsnm{Oppenheimer}, \binits{J.R.}},
+\bauthor{\bsnm{Volkoff}, \binits{G.M.}}:
+\batitle{On massive neutron cores}.
+\bjtitle{Phys. Rev.}
+\bvolume{55},
+\bfpage{374}--\blpage{381}
+(\byear{1939})
+\doiurl{10.1103/PhysRev.55.374}
+\end{barticle}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Abbott et~al.}{2018}]{GW170817_2018}
+\begin{barticle}
+\bauthor{\bsnm{Abbott}, \binits{B.P.}}, \betal:
+\batitle{{GW170817}: {M}easurements of neutron star radii and equation of
+  state}.
+\bjtitle{Phys. Rev. Lett.}
+\bvolume{121},
+\bfpage{161101}
+(\byear{2018})
+\doiurl{10.1103/PhysRevLett.121.161101}
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem[\protect\citeauthoryear{Miller et~al.}{2021}]{MillerNICER2021}
+\begin{barticle}
+\bauthor{\bsnm{Miller}, \binits{M.C.}}, \betal:
+\batitle{The radius of {PSR J0740+6620} from {NICER} and {XMM}-{N}ewton data}.
+\bjtitle{Astrophys. J. Lett.}
+\bvolume{918},
+\bfpage{28}
+(\byear{2021})
+\doiurl{10.3847/2041-8213/ac089b}
+\end{barticle}
+\endbibitem
+
+%%% 40
+\bibitem[\protect\citeauthoryear{Lamb}{1932}]{Lamb1932}
+\begin{bbook}
+\bauthor{\bsnm{Lamb}, \binits{H.}}:
+\bbtitle{Hydrodynamics},
+\bedition{6th} edn.
+\bpublisher{Cambridge University Press},
+\blocation{Cambridge}
+(\byear{1932})
+\end{bbook}
+\endbibitem
+
+%%% 41
+\bibitem[\protect\citeauthoryear{Rayleigh}{1879}]{Rayleigh1879}
+\begin{barticle}
+\bauthor{\bsnm{Rayleigh}, \binits{L.}}:
+\batitle{On the capillary phenomena of jets}.
+\bjtitle{Proc. R. Soc. Lond.}
+\bvolume{29},
+\bfpage{71}--\blpage{97}
+(\byear{1879})
+\doiurl{10.1098/rspl.1879.0015}
+\end{barticle}
+\endbibitem
+
+%%% 42
+\bibitem[\protect\citeauthoryear{Nicastro et~al.}{2018}]{Nicastro2018}
+\begin{barticle}
+\bauthor{\bsnm{Nicastro}, \binits{F.}}, \betal:
+\batitle{Observations of the missing baryons in the warm-hot intergalactic
+  medium}.
+\bjtitle{Nature}
+\bvolume{558},
+\bfpage{406}--\blpage{409}
+(\byear{2018})
+\doiurl{10.1038/s41586-018-0204-1}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
